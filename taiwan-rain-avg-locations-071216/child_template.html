@@ -1,0 +1,110 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+
+    <div class="graphic">
+        <table id="state-table">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_place }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_jan }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_feb }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_mar }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_apr }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_may }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_jun }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_jul }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_aug }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_sep }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_oct }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_nov }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_dec }}</div>
+                    </th>
+                </tr>
+            </thead>
+
+            {% for row in COPY.data %}
+            <tr class="state-{{ row.usps|classify }}">
+                <td data-title="{{ COPY.labels.hdr_place }}">{{ row.place }}</td>
+                <td data-title="{{ COPY.labels.hdr_jan }}" class="amt">{{ row.jan|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_feb }}" class="amt">{{ row.feb|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_mar }}" class="amt">{{ row.mar|decimal }}</td>
+                <td data-title="{{ COPY.labels.hdr_apr }}" class="amt">{{ row.apr|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_may }}" class="amt">{{ row.may|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_jun }}" class="amt">{{ row.jun|decimal }}</td>
+                <td data-title="{{ COPY.labels.hdr_jul }}" class="amt">{{ row.jul|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_aug }}" class="amt">{{ row.aug|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_sep }}" class="amt">{{ row.sep|decimal }}</td>
+                <td data-title="{{ COPY.labels.hdr_oct }}" class="amt">{{ row.oct|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_nov }}" class="amt">{{ row.nov|decimal }}</td>
+	            <td data-title="{{ COPY.labels.hdr_dec }}" class="amt">{{ row.dec|decimal }}</td>
+			</tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/tablesort.js') }}
+    {{ JS.push('js/lib/tablesort.numeric.js') }}
+    {{ JS.push('js/lib/pym.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}

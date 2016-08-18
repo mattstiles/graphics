@@ -1,0 +1,49 @@
+@import "base";
+
+.lines {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #ccc;
+}
+
+.tick
+{
+    font-size: 11px;
+    font-weight: normal;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+}
+.value text {
+    font-size: 12px;
+    font-weight: bold;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+    fill: #999;
+	-webkit-font-smoothing: antialiased;
+	
+	&.manhattan { fill: @teal2;display: none;}
+	&.queens { fill: @teal2;display: none;}
+	&.bronx { fill: @teal2;display: none;}
+	&.brooklyn { fill: @teal2;display: none;}
+	&.staten-island { fill: @teal2;display: none;}
+}
+
+@media screen and (max-width: 500px) {
+    .value text {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key {
+        display: none;
+    }
+	
+	.value text {
+	    font-size: 12px;
+	    font-weight: bold;
+	    fill: #999;
+	
+		&.british { fill: #999; display: inline;}
+		&.eu { fill: #999; display: inline;}
+		&.non-eu { fill: #999; display: inline;}
+	}
+}

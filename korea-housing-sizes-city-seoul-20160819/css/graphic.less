@@ -1,0 +1,44 @@
+@import "base";
+
+.value text {
+    fill: #fff;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.labels li {
+	font-size: 11px;
+	
+	&.seoul,
+	&.korea-avg {
+	font-weight:bold;
+	color: #000;
+	text-transform: uppercase; 
+	}
+}
+
+.keychatter {
+    font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+    font-size: 13px;
+	font-weight: bold;
+	line-height: 18px;
+	margin-bottom: 20px; 
+}
+
+// .average rect {
+// 		stroke-width: 2px;
+// 		stroke: #000;
+// }
+
+@media screen and (max-width: 500px) {	
+
+.key {
+    display:block;
+
+    .key-item {
+        display:block; 
+        }
+    }
+}

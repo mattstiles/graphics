@@ -1,0 +1,68 @@
+@import "base";
+
+.tick
+{
+    font-size: 11px;
+    font-weight: normal;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+}
+
+text {
+        fill: #999;
+        text-anchor: end;
+        -webkit-font-smoothing: antialiased;
+		
+		&.annotations { 
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+			font-size: 12px;
+			text-anchor: start;
+		}
+		
+		&.zero-line-label {
+			font-size: 11px;
+		}
+}
+
+.value text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+}
+
+.zero-line  {
+    stroke: #999;
+    stroke-width: 3px;
+    shape-rendering: crispEdges;
+}
+
+.bars rect { fill: @teal3; }
+
+.bars rect {
+	&.negative { fill: @orange3; }
+}
+
+.labels li {
+	&.north-dakota {
+		font-weight: bold;
+	}
+}
+
+.zero-line-label {
+    font-weight: bold;
+    fill: #999;
+    font-size: 11px;
+    -webkit-font-smoothing: antialiased;
+	display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .key { display: none; }
+	
+	text {
+			&.annotations { 
+				display:none;
+				font-size: 10px;
+			}
+	}
+}

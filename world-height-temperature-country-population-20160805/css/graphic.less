@@ -1,0 +1,245 @@
+@import "base";
+
+.dots circle {
+    stroke-width: 1px;
+    stroke: #fff;
+    fill: @yellow3;
+	opacity: .7;
+}
+
+.dots circle {
+    &.high-income, { 
+		fill: @cbgreen3;
+		stroke: #fff; 
+		stroke-width: 1px;
+	}
+    &.low-income, { 
+		fill: @cbred3;
+		stroke: #fff; 
+		stroke-width: 1px;
+	}
+    &.upper-middle-income, { 
+		fill: @cbblue3;
+		stroke: #fff; 
+		stroke-width: 1px;
+	}
+    &.lower-middle-income, { 
+		fill: @yellow3;
+		stroke: #fff; 
+		stroke-width: 1px;
+	}
+	
+    &.legend, { 
+		fill: none;
+		stroke: #999; 
+		stroke-width: 1px;
+	}
+}
+
+.value text {
+    font-size: 11px;
+    fill: #999;
+}
+
+.shadow text {
+    font-size: 10px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	fill: #000;
+	display:none;
+    shape-rendering: crispEdges;
+}
+
+.shadow text {
+    &.netherlands,
+	&.china,
+	&.canada,
+	&.usa,
+	&.india,
+	&.s-korea,
+	&.laos,
+	&.russia,
+	&.afghanistan,
+	&.australia { 
+	    font-size: 11px;
+	    fill: #fff;
+	    stroke: #fff;
+	    stroke-width: 2px;
+		display:inline;
+	}
+}
+
+.labels text {
+    font-size: 10px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	fill: #000;
+	display:none;
+    shape-rendering: crispEdges;
+}
+
+.labels text {
+    &.netherlands,
+	&.china,
+	&.usa,
+	&.canada,
+	&.india,
+	&.s-korea,
+	&.laos,
+	&.russia,
+	&.afghanistan,
+	&.australia { 
+		fill: #000;
+	    font-size: 11px;
+		font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+		display:inline;
+	    shape-rendering: crispEdges;
+	}
+}
+
+.avg-line-height  {
+    //stroke: #c33826;
+	stroke: #666;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: .5;
+}
+
+.avg-line-temperature  {
+    //stroke: #c33826;
+	stroke: #666;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: .5;
+}
+
+text {
+&.avg-label-height,
+&.avg-label-temperature {
+	fill: #999;
+    font-size: 10px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	display:inline;
+    shape-rendering: crispEdges;
+	}
+}
+
+text {
+&.tenm,
+&.hundredm,
+&.threehundredm {
+	fill: #000;
+    font-size: 9px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	display:inline;
+    shape-rendering: crispEdges;
+	}
+}
+
+text {
+&.population-header {
+	fill: #000;
+    font-size: 10px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	display:inline;
+	text-transform:uppercase;
+	font-weight: bold;
+    shape-rendering: crispEdges;
+	}
+}
+
+
+rect {
+    &.taller-hotter { fill: #fff; }
+	&.shorter-colder { fill: #fff; }
+    &.taller-colder { fill: #f6f6f6; }
+	&.shorter-hotter { fill: #f6f6f6; }
+	
+}
+
+.xlabel {
+    font-size: 12px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    fill: #999;
+	font-weight:bold; 
+}
+
+.ylabel {
+    font-size: 12px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    fill: #999;
+	font-weight: bold; 
+}
+
+text {
+	&.label-hotter-shorter,
+	&.label-hotter-taller,
+	&.label-colder-shorter,
+	&.label-colder-taller, {
+    	fill: #666;
+	    font-size: 13px;
+		text-transform: uppercase;
+		font-weight: bold;
+	    -webkit-font-smoothing: antialiased;
+		display: inline;
+}
+}
+
+.legend circle {
+  fill: none;
+  stroke: #ccc;
+}
+
+.legend text {
+  fill: #777;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.tooltip {
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	position: absolute;
+	fill: #000;
+	width: 50px;
+	height: 20px;
+	pointer-events: none;
+	font-size: 11px;
+}
+
+.key-item .high-income {
+    b.western-pacific { background-color: @teal3; opacity: .6; }
+}
+
+.key-item .low-income {
+    b.europe { background-color: @red3;	opacity: .6; }
+}
+
+.key-item .upper-middle-income {
+    b.africa { background-color: @blue3; opacity: .6;}
+}
+
+.key-item .lower-middle-income {
+    b.eastern-mediterranean { background-color: @yellow3; opacity: .6;}
+}
+
+
+// mobile 
+
+@media screen and (max-width: 500px) {
+	
+	text {
+	&.label-hotter-shorter,
+	&.label-hotter-taller,
+	&.label-colder-shorter,
+	&.label-colder-taller, {
+    	fill: #666;
+	    font-size: 9px;
+		text-transform: uppercase;
+		font-weight: bold;
+	    -webkit-font-smoothing: antialiased;
+		display: inline;
+		z-index: 1;
+}
+}
+
+}

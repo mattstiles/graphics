@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Daily Viz | Matt Stiles</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex" />
+    <link rel="shortcut icon" href="http://thedailyviz.com/favicon.ico" />
+
+	<link rel='stylesheet' id='illustratr-source-sans-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-pt-serif-css'  href='https://fonts.googleapis.com/css?family=PT+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-source-code-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Code+Pro' type='text/css' media='all' />
+
+    <base target="_blank">
+
+    <!-- Configuration -->
+    <script type="text/javascript">
+        GOOGLE_ANALYTICS_ACCOUNT_ID = 'UA-30938757-1';
+        GOOGLE_ANALYTICS_PROJECT_SLUG = 'nyc-pop-changes-20160626';
+    </script>
+
+    <!-- CSS + LESS -->
+    
+    <link rel="stylesheet" type="text/css" href="css/graphic-header.css?1467244189" />
+</head>
+<body>
+    <!-- Analytics -->
+    
+    
+    <script type="text/javascript" src="js/graphic-header.js?1467244189"></script>
+
+    
+
+    <h1>NYC Borough Population: 1790-2015</h1>
+    
+
+    <div id="line-chart" class="graphic">  
+    </div>
+
+    <div class="footer">
+		
+        <p>Data: <a href="https://en.wikipedia.org/wiki/Demographics_of_New_York_City">Wikipedia</a></p>
+        <p>Credit: Matt Stiles/<a href="http://www.thedailyviz.com">The Daily Viz</a></p>
+    </div>
+
+    <script type="text/javascript">
+        var DATA = [{"Manhattan": "33131.0", "Brooklyn": "4549.0", "Queens": "6159.0", "Bronx": "1781.0", "Staten Island": "3827.0", "date": "01/01/1790"}, {"Manhattan": "60515.0", "Brooklyn": "5740.0", "Queens": "6642.0", "Bronx": "1755.0", "Staten Island": "4563.0", "date": "01/01/1800"}, {"Manhattan": "96373.0", "Brooklyn": "8303.0", "Queens": "7444.0", "Bronx": "2267.0", "Staten Island": "5347.0", "date": "01/01/1810"}, {"Manhattan": "123706.0", "Brooklyn": "11187.0", "Queens": "8246.0", "Bronx": "2782.0", "Staten Island": "6135.0", "date": "01/01/1820"}, {"Manhattan": "202589.0", "Brooklyn": "20535.0", "Queens": "9049.0", "Bronx": "3023.0", "Staten Island": "7082.0", "date": "01/01/1830"}, {"Manhattan": "312710.0", "Brooklyn": "47613.0", "Queens": "14480.0", "Bronx": "5346.0", "Staten Island": "10965.0", "date": "01/01/1840"}, {"Manhattan": "515547.0", "Brooklyn": "138882.0", "Queens": "18593.0", "Bronx": "8032.0", "Staten Island": "15061.0", "date": "01/01/1850"}, {"Manhattan": "813669.0", "Brooklyn": "279122.0", "Queens": "32903.0", "Bronx": "23593.0", "Staten Island": "25492.0", "date": "01/01/1860"}, {"Manhattan": "942292.0", "Brooklyn": "419921.0", "Queens": "45468.0", "Bronx": "37393.0", "Staten Island": "33029.0", "date": "01/01/1870"}, {"Manhattan": "1164673.0", "Brooklyn": "599495.0", "Queens": "56559.0", "Bronx": "51980.0", "Staten Island": "38991.0", "date": "01/01/1880"}, {"Manhattan": "1441216.0", "Brooklyn": "838547.0", "Queens": "87050.0", "Bronx": "88908.0", "Staten Island": "51693.0", "date": "01/01/1890"}, {"Manhattan": "1850093.0", "Brooklyn": "1166582.0", "Queens": "152999.0", "Bronx": "200507.0", "Staten Island": "67021.0", "date": "01/01/1900"}, {"Manhattan": "2331542.0", "Brooklyn": "1634351.0", "Queens": "284041.0", "Bronx": "430980.0", "Staten Island": "85969.0", "date": "01/01/1910"}, {"Manhattan": "2284103.0", "Brooklyn": "2018356.0", "Queens": "469042.0", "Bronx": "732016.0", "Staten Island": "116531.0", "date": "01/01/1920"}, {"Manhattan": "1867312.0", "Brooklyn": "2560401.0", "Queens": "1079129.0", "Bronx": "1265258.0", "Staten Island": "158346.0", "date": "01/01/1930"}, {"Manhattan": "1889924.0", "Brooklyn": "2698285.0", "Queens": "1297634.0", "Bronx": "1394711.0", "Staten Island": "174441.0", "date": "01/01/1940"}, {"Manhattan": "1960101.0", "Brooklyn": "2738175.0", "Queens": "1550849.0", "Bronx": "1451277.0", "Staten Island": "191555.0", "date": "01/01/1950"}, {"Manhattan": "1698281.0", "Brooklyn": "2627319.0", "Queens": "1809578.0", "Bronx": "1424815.0", "Staten Island": "221991.0", "date": "01/01/1960"}, {"Manhattan": "1539233.0", "Brooklyn": "2602012.0", "Queens": "1986473.0", "Bronx": "1471701.0", "Staten Island": "295443.0", "date": "01/01/1970"}, {"Manhattan": "1428285.0", "Brooklyn": "2230936.0", "Queens": "1891325.0", "Bronx": "1168972.0", "Staten Island": "352121.0", "date": "01/01/1980"}, {"Manhattan": "1487536.0", "Brooklyn": "2300664.0", "Queens": "1951598.0", "Bronx": "1203789.0", "Staten Island": "378977.0", "date": "01/01/1990"}, {"Manhattan": "1537195.0", "Brooklyn": "2465326.0", "Queens": "2229379.0", "Bronx": "1332650.0", "Staten Island": "443728.0", "date": "01/01/2000"}, {"Manhattan": "1585873.0", "Brooklyn": "2504700.0", "Queens": "2230722.0", "Bronx": "1385108.0", "Staten Island": "468730.0", "date": "01/01/2010"}, {"Manhattan": "1644518.0", "Brooklyn": "2636735.0", "Queens": "2339150.0", "Bronx": "1455444.0", "Staten Island": "474558.0", "date": "01/01/2015"}];
+    </script>
+
+
+
+    
+
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="js/graphic-footer.js?1467244189"></script>
+
+		<script src="js/swoopy-drag.js"></script>
+
+    
+</body>
+</html>

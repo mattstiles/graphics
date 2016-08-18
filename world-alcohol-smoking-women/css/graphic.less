@@ -1,0 +1,107 @@
+@import "base";
+
+.dots circle {
+    stroke-width: 1px;
+    stroke: #fff;
+    fill: @orange3;
+	opacity: 1;
+}
+
+.dots circle {
+    &.dots-1 { 
+		fill: @teal3;
+		stroke: #fff; 
+		stroke-width: 1px;
+	}
+}
+
+.shadow text {
+    font-size: 11px;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 5px;
+}
+.value text {
+    font-size: 11px;
+    fill: #999;
+}
+
+.labels text {
+    font-size: 10px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	fill: #000;
+	display:none;
+    shape-rendering: crispEdges;
+}
+
+.labels text {
+    &.russian-federation,
+	&.usa,
+	&.france,
+	&.south-korea,
+	&.australia,
+	&.pakistan,
+	&.iran { 
+		fill: #000;
+	    font-size: 11px;
+		font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+		display:inline;
+	    shape-rendering: crispEdges;
+	}
+}
+
+.avg-line-drinking  {
+    //stroke: #c33826;
+	stroke: #666;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: .5;
+}
+
+.avg-line-smoking  {
+    //stroke: #c33826;
+	stroke: #666;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: .5;
+}
+
+.xlabel {
+    font-size: 12px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    fill: #999;
+	font-weight:bold; 
+}
+
+.ylabel {
+    font-size: 12px;
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    fill: #999;
+	font-weight: bold; 
+}
+
+.label-alcohol {
+    fill: #666;
+    font-size: 11px;
+    -webkit-font-smoothing: antialiased;
+	display: inline;
+}
+
+.label-smoking {
+    fill: #666;
+    font-size: 11px;
+    -webkit-font-smoothing: antialiased;
+	display: inline;
+}
+
+.tooltip {
+	font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	position: absolute;
+	fill: #000;
+	width: 50px;
+	height: 20px;
+	pointer-events: none;
+	font-size: 11px;
+}

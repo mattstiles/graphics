@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Daily Viz | Matt Stiles</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex" />
+    <link rel="shortcut icon" href="http://thedailyviz.com/favicon.ico" />
+
+	<link rel='stylesheet' id='illustratr-source-sans-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-pt-serif-css'  href='https://fonts.googleapis.com/css?family=PT+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-source-code-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Code+Pro' type='text/css' media='all' />
+
+    <base target="_blank">
+
+    <!-- Configuration -->
+    <script type="text/javascript">
+        GOOGLE_ANALYTICS_ACCOUNT_ID = 'UA-30938757-1';
+        GOOGLE_ANALYTICS_PROJECT_SLUG = 'korea-housing-sizes-city-seoul-20160819';
+    </script>
+
+    <!-- CSS + LESS -->
+    
+    <link rel="stylesheet" type="text/css" href="css/graphic-header.css?1471525746" />
+</head>
+<body>
+    <!-- Analytics -->
+    
+    
+    <script type="text/javascript" src="js/graphic-header.js?1471525746"></script>
+
+    
+
+    <h1>Housing Space, by City/Province</h1>
+    <h2>The size of South Korean residences varies by city and province. In Seoul, for example, spacious homes are more common.</h2>
+
+	<p class="keychatter">Residential categories by square meters*: </p>
+
+    <div id="stacked-bar-chart" class="graphic">  
+    </div>
+
+    <div class="footer">
+		<p>Notes: *100 sq. meters =  1,076.391 sq. feet. Here&#8217;s a <a href="http://www.metric-conversions.org/area/square-meters-to-square-feet.htm">converter</a>.</p>
+        <p>Data: Korean Statistical Information Service, <a href="http://kosis.kr/statHtml/statHtml.do?orgId=116&tblId=DT_MLTM_540&conn_path=I2&language=en">Building Census</a></p>
+        <p>Credit: Matt Stiles/<a href="http://www.thedailyviz.com">The Daily Viz</a></p>
+    </div>
+
+    <script type="text/javascript">
+        var DATA = [{"label": "Seoul", "< 100 sq. meters": "20.63", "100-200": "22.98", "200-300": "16.27", "300-500": "15.85", "500-1,000": "13.87", "1,000-3,000": "5.68", "> 3,000": "4.71"}, {"label": "Gyeonggi", "< 100 sq. meters": "27.89", "100-200": "26.78", "200-300": "9.91", "300-500": "15.1", "500-1,000": "10.93", "1,000-3,000": "4.79", "> 3,000": "4.59"}, {"label": "Daegu", "< 100 sq. meters": "31.09", "100-200": "29.75", "200-300": "9.14", "300-500": "14.52", "500-1,000": "8.14", "1,000-3,000": "4.01", "> 3,000": "3.35"}, {"label": "Daejeon", "< 100 sq. meters": "31.9", "100-200": "26.67", "200-300": "7.52", "300-500": "15.62", "500-1,000": "9.42", "1,000-3,000": "4.22", "> 3,000": "4.65"}, {"label": "Incheon", "< 100 sq. meters": "32.51", "100-200": "19.82", "200-300": "9.48", "300-500": "15.31", "500-1,000": "12.32", "1,000-3,000": "5.51", "> 3,000": "5.05"}, {"label": "Ulsan", "< 100 sq. meters": "36.4", "100-200": "25.03", "200-300": "8.15", "300-500": "13.94", "500-1,000": "8.22", "1,000-3,000": "4.49", "> 3,000": "3.75"}, {"label": "Gwangju", "< 100 sq. meters": "37.15", "100-200": "30.5", "200-300": "5.99", "300-500": "11.38", "500-1,000": "6.48", "1,000-3,000": "4.05", "> 3,000": "4.45"}, {"label": "Busan", "< 100 sq. meters": "44.82", "100-200": "26.69", "200-300": "5.96", "300-500": "8.57", "500-1,000": "6.92", "1,000-3,000": "3.84", "> 3,000": "3.19"}, {"label": "Korea Avg.", "< 100 sq. meters": "46.57", "100-200": "22.45", "200-300": "7.42", "300-500": "10.24", "500-1,000": "7.04", "1,000-3,000": "3.56", "> 3,000": "2.72"}, {"label": "Sejong", "< 100 sq. meters": "49.74", "100-200": "23.33", "200-300": "5.82", "300-500": "8.9", "500-1,000": "5.43", "1,000-3,000": "2.81", "> 3,000": "3.97"}, {"label": "Chungbuk", "< 100 sq. meters": "51.77", "100-200": "23.56", "200-300": "6.3", "300-500": "8.7", "500-1,000": "5.0", "1,000-3,000": "2.89", "> 3,000": "1.78"}, {"label": "Chungnam", "< 100 sq. meters": "56.22", "100-200": "21.04", "200-300": "5.3", "300-500": "7.47", "500-1,000": "5.34", "1,000-3,000": "2.93", "> 3,000": "1.7"}, {"label": "Gyeongnam", "< 100 sq. meters": "57.23", "100-200": "19.82", "200-300": "5.87", "300-500": "7.95", "500-1,000": "4.36", "1,000-3,000": "2.82", "> 3,000": "1.96"}, {"label": "Jeonbuk", "< 100 sq. meters": "57.38", "100-200": "20.09", "200-300": "5.39", "300-500": "7.55", "500-1,000": "4.91", "1,000-3,000": "3.06", "> 3,000": "1.62"}, {"label": "Gangwon", "< 100 sq. meters": "58.42", "100-200": "20.59", "200-300": "5.75", "300-500": "7.3", "500-1,000": "3.97", "1,000-3,000": "2.48", "> 3,000": "1.49"}, {"label": "Jeju", "< 100 sq. meters": "58.93", "100-200": "19.95", "200-300": "5.5", "300-500": "7.02", "500-1,000": "4.83", "1,000-3,000": "2.59", "> 3,000": "1.18"}, {"label": "Gyeongbuk", "< 100 sq. meters": "60.74", "100-200": "18.73", "200-300": "4.89", "300-500": "7.21", "500-1,000": "4.71", "1,000-3,000": "2.47", "> 3,000": "1.24"}, {"label": "Jeonnam", "< 100 sq. meters": "66.29", "100-200": "17.91", "200-300": "4.1", "300-500": "5.47", "500-1,000": "3.07", "1,000-3,000": "2.15", "> 3,000": "1.01"}];
+        var LABELS = {"headline": "Housing Space, by City/Province", "subhed": "The size of South Korean residences varies by city and province. In Seoul, for example, spacious homes are more common.", "footnote": "*100 sq. meters =  1,076.391 sq. feet. Here's a <a href=\"http://www.metric-conversions.org/area/square-meters-to-square-feet.htm\">converter</a>.", "source": "Korean Statistical Information Service, <a href=\"http://kosis.kr/statHtml/statHtml.do?orgId=116&tblId=DT_MLTM_540&conn_path=I2&language=en\">Building Census</a>", "credit": "Matt Stiles/<a href=\"http://www.thedailyviz.com\">The Daily Viz</a>", "keychatter": "Residential categories by square meters*:"};
+    </script>
+
+
+
+    
+
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="js/graphic-footer.js?1471525746"></script>
+
+    
+</body>
+</html>

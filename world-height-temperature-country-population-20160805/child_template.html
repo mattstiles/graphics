@@ -1,0 +1,45 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhedpop %}<h2>{{ render(COPY.labels.subhedpop)|smarty }}</h2>{% endif %}
+
+	<div class="legend">
+		<ul class="key">
+			<li class="key-item low-income">
+				<b style="background-color: #fb6a4a;"></b>
+				<label>Low income</label>
+			</li>
+			<li class="key-item lower-middle-income">
+				<b style="background-color: #EFC637;"></b>
+				<label>Lower middle income</label>
+			</li>
+			<li class="key-item upper-middle-income">
+				<b style="background-color: #6baed6;"></b>
+				<label>Upper middle income</label>
+			</li>
+			<li class="key-item high-income">
+				<b style="background-color: #66c2a4;"></b>
+				<label>High income</label>
+			</li>
+			</li>
+		</ul>
+	</div>
+    
+	<div id="dot-chart" class="graphic">  
+    </div>
+
+    <div class="footer">
+		{% if COPY.labels.footnote %}<p>Notes: {{ COPY.labels.footnote|smarty }}</p>{% endif %}
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+    <script type="text/javascript">
+        var DATA = {{ COPY.data.json() }};
+		var LABELS = {{ COPY.labels.json() }};
+
+    </script>
+
+{% endblock content %}

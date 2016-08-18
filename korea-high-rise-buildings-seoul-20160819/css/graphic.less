@@ -1,0 +1,46 @@
+@import "base";
+
+.highlight-label { display: none; }
+.highlight-note { display: none; }
+
+
+@media screen and (max-width: 500px) {
+	.value text {
+	    display:none;
+
+	    &.in { fill: #fff; display:none;}
+	    &.out { fill: #666; display:none;}
+	}
+
+	.highlight-label {
+	    font-size: 11px;
+		display: inline;
+	    fill: #666;
+	    -webkit-font-smoothing: antialiased;
+
+	    &.label-2015 {
+	        text-anchor: middle;
+		}
+	    &.label-2005 {
+	        text-anchor: middle;
+	    }
+	}
+
+	.highlight-note {
+	    display: inline;
+	    font-size: 11px;
+	    color: #666;
+	    padding: 10px 0 0;
+	    -webkit-font-smoothing: antialiased;
+
+	    b {
+	        display: inline-block;
+	        width: 24px;
+	        height: 12px;
+	        background: #dfdfdf;
+	        margin-right: 5px;
+	        margin-bottom: -1px;
+	    }
+	}
+}
+

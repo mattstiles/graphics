@@ -1,0 +1,136 @@
+@import "base";
+
+.bars line {
+    fill: none;
+    stroke-width: 4px;
+    stroke: #e6e6e6;
+}
+
+.value text {
+    font-size: 11px;
+    fill: #777;
+}
+
+.shadow text {
+    font-size: 11px;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 5px;
+}
+
+.label-top {
+    font-style: italic;
+    fill: #999;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.label-top-avg {
+    font-weight: bold;
+    fill: #999;
+    font-size: 11px;
+    -webkit-font-smoothing: antialiased;
+	display: none;
+}
+
+.dots {
+    &.men {
+        stroke-width: 1px;
+        stroke: #fff;
+        fill: @orange3;
+    }
+    &.women {
+        stroke-width: 1px;
+        stroke: #fff;
+        fill: @teal3;
+    }
+	
+	&.avg {
+        stroke-width: 1px;
+        stroke: #fff;
+		fill: #999;
+	}
+}
+
+.avg-line  {
+    //stroke: #c33826;
+	stroke: #999;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: .5;
+}
+
+.value text {
+	display:none;
+    font-size: 11px;
+	font-weight: bold;
+    fill: #999;
+
+    .men& { fill: @orange3; }
+    .women& { fill: @teal3; }
+	.avg& { fill: #999; }
+
+    &:first-child { font-weight: bold; }
+}
+
+.shadow text {
+	display:none;
+    font-size: 11px;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 5px;
+
+    &:last-child { display: none; }
+}
+
+.key-item .women {
+    b.women { background-color: @orange3; }
+}
+
+.key-item .men {
+    b.men { background-color: @teal3; }
+}
+
+.key-item .avg {
+    b.avg { background-color: #999; }
+}
+
+.labels li.world-average {
+	font-weight: bold;
+	color: #666;
+}
+
+.labels li.south-korea {
+	font-weight: bold;
+	color: #666;
+}
+
+.labels li.united-states {
+	font-weight: bold;
+	color: #666;
+}
+
+@media screen and (min-width: 500px) {
+	
+	.shadow text {
+		display:inline;
+	}
+	
+	.label-top-avg {
+		display: inline;
+	}
+	
+    .key {
+        display: none;
+    }
+	
+	.value text {
+	    font-size: 12px;
+	    font-weight: bold;
+	    fill: #999;
+		
+	    .men& { fill: @orange3; display: inline;}
+	    .women& { fill: @teal3; display: inline;}
+		.avg& { fill: #999; display: inline;}
+	}
+}

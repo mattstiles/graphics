@@ -1,0 +1,82 @@
+@import "base";
+
+.bar text {
+    fill: #fff;
+
+    &.hidden {
+        display: none;
+    }
+    &.other-citiesprovinces {
+	    font-size: 11px;
+		fill: #666;
+		font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	    -webkit-font-smoothing: antialiased;
+    }
+    &.seoul {
+	    font-size: 11px;
+		fill: #fff;
+		font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+	    -webkit-font-smoothing: antialiased;
+    }
+}
+
+.highlight-label { display: none; }
+.highlight-note { display: none; }
+
+
+@media screen and (max-width: 500px) {
+	.value text {
+	    display:none;
+
+	    &.in { fill: #fff; display:none;}
+	    &.out { fill: #666; display:none;}
+	}
+
+	.highlight-label {
+	    font-size: 11px;
+		display: inline;
+	    fill: #666;
+	    -webkit-font-smoothing: antialiased;
+
+	    &.label-seoul-2015 {
+	        text-anchor: middle;
+			fill: #fff;
+		}
+	    &.label-other-2015 {
+	        text-anchor: middle;
+	    }
+	}
+
+	.highlight-note {
+	    display: inline;
+	    font-size: 11px;
+	    color: #666;
+	    padding: 10px 0 0;
+	    -webkit-font-smoothing: antialiased;
+
+	    b {
+	        display: inline-block;
+	        width: 24px;
+	        height: 12px;
+	        background: #dfdfdf;
+	        margin-right: 5px;
+	        margin-bottom: -1px;
+	    }
+	}
+	
+	.bar text {
+	    fill: #fff;
+
+	    &.hidden {
+	        display: none;
+	    }
+	    &.other-citiesprovinces {
+		    display: none;
+	    }
+	    &.seoul {
+		    display: none;
+	    }
+	}
+	
+}
+

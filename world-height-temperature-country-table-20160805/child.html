@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Daily Viz | Matt Stiles</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex" />
+    <link rel="shortcut icon" href="http://thedailyviz.com/favicon.ico" />
+
+	<link rel='stylesheet' id='illustratr-source-sans-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-pt-serif-css'  href='https://fonts.googleapis.com/css?family=PT+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-source-code-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Code+Pro' type='text/css' media='all' />
+
+    <base target="_blank">
+
+    <!-- Configuration -->
+    <script type="text/javascript">
+        GOOGLE_ANALYTICS_ACCOUNT_ID = 'UA-30938757-1';
+        GOOGLE_ANALYTICS_PROJECT_SLUG = 'world-height-temperature-country-table-20160805';
+    </script>
+
+    <!-- CSS + LESS -->
+    
+    <link rel="stylesheet" type="text/css" href="css/graphic-header.css?1470731610" />
+</head>
+<body>
+    <!-- Analytics -->
+    
+    
+    <script type="text/javascript" src="js/graphic-header.js?1470731610"></script>
+
+    
+
+    <h1>Heat vs. Height</h1>
+    <h2>Compare countries&#8217; <strong>average male height</strong> and <strong>average annual temperature</strong>. Sort the table by country name, income category or region. </h2>
+
+    <div class="graphic">
+        <table id="state-table">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">Country</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">Male Height (Cm)</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">Temperature (C)</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">Population</div>
+                    </th>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">Region</div>
+                    </th>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">Wealth</div>
+                    </th>
+                </tr>
+            </thead>
+
+            
+            <tr class="afghanistan">
+                <td data-title="Country">Afghanistan</td>
+                <td data-title="Male Height (Cm)" class="amt">165.26</td>
+                <td data-title="Temperature (C)" class="amt">12.92</td>
+                <td data-title="Population" class="amt">28,400,000</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="albania">
+                <td data-title="Country">Albania</td>
+                <td data-title="Male Height (Cm)" class="amt">173.39</td>
+                <td data-title="Temperature (C)" class="amt">11.27</td>
+                <td data-title="Population" class="amt">3,639,453</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="algeria">
+                <td data-title="Country">Algeria</td>
+                <td data-title="Male Height (Cm)" class="amt">170.07</td>
+                <td data-title="Temperature (C)" class="amt">22.58</td>
+                <td data-title="Population" class="amt">34,178,188</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="angola">
+                <td data-title="Country">Angola</td>
+                <td data-title="Male Height (Cm)" class="amt">167.31</td>
+                <td data-title="Temperature (C)" class="amt">21.51</td>
+                <td data-title="Population" class="amt">12,799,293</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="argentina">
+                <td data-title="Country">Argentina</td>
+                <td data-title="Male Height (Cm)" class="amt">174.62</td>
+                <td data-title="Temperature (C)" class="amt">14.22</td>
+                <td data-title="Population" class="amt">40,913,584</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="armenia">
+                <td data-title="Country">Armenia</td>
+                <td data-title="Male Height (Cm)" class="amt">172.0</td>
+                <td data-title="Temperature (C)" class="amt">6.37</td>
+                <td data-title="Population" class="amt">2,967,004</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="australia">
+                <td data-title="Country">Australia</td>
+                <td data-title="Male Height (Cm)" class="amt">179.2</td>
+                <td data-title="Temperature (C)" class="amt">21.51</td>
+                <td data-title="Population" class="amt">21,262,641</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="austria">
+                <td data-title="Country">Austria</td>
+                <td data-title="Male Height (Cm)" class="amt">177.41</td>
+                <td data-title="Temperature (C)" class="amt">6.19</td>
+                <td data-title="Population" class="amt">8,210,281</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="azerbaijan">
+                <td data-title="Country">Azerbaijan</td>
+                <td data-title="Male Height (Cm)" class="amt">169.75</td>
+                <td data-title="Temperature (C)" class="amt">12.22</td>
+                <td data-title="Population" class="amt">8,238,672</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="bahamas">
+                <td data-title="Country">Bahamas</td>
+                <td data-title="Male Height (Cm)" class="amt">172.75</td>
+                <td data-title="Temperature (C)" class="amt">25.06</td>
+                <td data-title="Population" class="amt">309,156</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="bangladesh">
+                <td data-title="Country">Bangladesh</td>
+                <td data-title="Male Height (Cm)" class="amt">163.81</td>
+                <td data-title="Temperature (C)" class="amt">25.47</td>
+                <td data-title="Population" class="amt">156,050,883</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="belarus">
+                <td data-title="Country">Belarus</td>
+                <td data-title="Male Height (Cm)" class="amt">178.44</td>
+                <td data-title="Temperature (C)" class="amt">6.29</td>
+                <td data-title="Population" class="amt">9,648,533</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="belgium">
+                <td data-title="Country">Belgium</td>
+                <td data-title="Male Height (Cm)" class="amt">181.7</td>
+                <td data-title="Temperature (C)" class="amt">9.51</td>
+                <td data-title="Population" class="amt">10,414,336</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="belize">
+                <td data-title="Country">Belize</td>
+                <td data-title="Male Height (Cm)" class="amt">168.73</td>
+                <td data-title="Temperature (C)" class="amt">25.06</td>
+                <td data-title="Population" class="amt">307,899</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="benin">
+                <td data-title="Country">Benin</td>
+                <td data-title="Male Height (Cm)" class="amt">167.06</td>
+                <td data-title="Temperature (C)" class="amt">27.46</td>
+                <td data-title="Population" class="amt">8,791,832</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="bhutan">
+                <td data-title="Country">Bhutan</td>
+                <td data-title="Male Height (Cm)" class="amt">165.31</td>
+                <td data-title="Temperature (C)" class="amt">8.58</td>
+                <td data-title="Population" class="amt">691,141</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="bolivia">
+                <td data-title="Country">Bolivia</td>
+                <td data-title="Male Height (Cm)" class="amt">166.85</td>
+                <td data-title="Temperature (C)" class="amt">20.98</td>
+                <td data-title="Population" class="amt">9,775,246</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="bosnia-and-herzegovina">
+                <td data-title="Country">Bosnia and Herzegovina</td>
+                <td data-title="Male Height (Cm)" class="amt">180.87</td>
+                <td data-title="Temperature (C)" class="amt">9.02</td>
+                <td data-title="Population" class="amt">4,613,414</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="botswana">
+                <td data-title="Country">Botswana</td>
+                <td data-title="Male Height (Cm)" class="amt">171.63</td>
+                <td data-title="Temperature (C)" class="amt">21.48</td>
+                <td data-title="Population" class="amt">1,990,876</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="brazil">
+                <td data-title="Country">Brazil</td>
+                <td data-title="Male Height (Cm)" class="amt">173.55</td>
+                <td data-title="Temperature (C)" class="amt">24.92</td>
+                <td data-title="Population" class="amt">198,739,269</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="brunei-darussalam">
+                <td data-title="Country">Brunei Darussalam</td>
+                <td data-title="Male Height (Cm)" class="amt">165.01</td>
+                <td data-title="Temperature (C)" class="amt">25.93</td>
+                <td data-title="Population" class="amt">388,190</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="bulgaria">
+                <td data-title="Country">Bulgaria</td>
+                <td data-title="Male Height (Cm)" class="amt">178.24</td>
+                <td data-title="Temperature (C)" class="amt">10.4</td>
+                <td data-title="Population" class="amt">7,204,687</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="burkina-faso">
+                <td data-title="Country">Burkina Faso</td>
+                <td data-title="Male Height (Cm)" class="amt">169.33</td>
+                <td data-title="Temperature (C)" class="amt">28.18</td>
+                <td data-title="Population" class="amt">15,746,232</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="burundi">
+                <td data-title="Country">Burundi</td>
+                <td data-title="Male Height (Cm)" class="amt">166.64</td>
+                <td data-title="Temperature (C)" class="amt">20.27</td>
+                <td data-title="Population" class="amt">8,988,091</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="cambodia">
+                <td data-title="Country">Cambodia</td>
+                <td data-title="Male Height (Cm)" class="amt">163.33</td>
+                <td data-title="Temperature (C)" class="amt">26.94</td>
+                <td data-title="Population" class="amt">14,494,293</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="cameroon">
+                <td data-title="Country">Cameroon</td>
+                <td data-title="Male Height (Cm)" class="amt">167.82</td>
+                <td data-title="Temperature (C)" class="amt">24.53</td>
+                <td data-title="Population" class="amt">18,879,301</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="canada">
+                <td data-title="Country">Canada</td>
+                <td data-title="Male Height (Cm)" class="amt">178.09</td>
+                <td data-title="Temperature (C)" class="amt">-7.14</td>
+                <td data-title="Population" class="amt">33,487,208</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="central-african-republic">
+                <td data-title="Country">Central African Republic</td>
+                <td data-title="Male Height (Cm)" class="amt">166.67</td>
+                <td data-title="Temperature (C)" class="amt">24.84</td>
+                <td data-title="Population" class="amt">4,511,488</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="chad">
+                <td data-title="Country">Chad</td>
+                <td data-title="Male Height (Cm)" class="amt">170.44</td>
+                <td data-title="Temperature (C)" class="amt">26.65</td>
+                <td data-title="Population" class="amt">10,329,208</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="chile">
+                <td data-title="Country">Chile</td>
+                <td data-title="Male Height (Cm)" class="amt">171.81</td>
+                <td data-title="Temperature (C)" class="amt">8.37</td>
+                <td data-title="Population" class="amt">16,601,707</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="china">
+                <td data-title="Country">China</td>
+                <td data-title="Male Height (Cm)" class="amt">171.83</td>
+                <td data-title="Temperature (C)" class="amt">6.33</td>
+                <td data-title="Population" class="amt">1,338,612,970</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="colombia">
+                <td data-title="Country">Colombia</td>
+                <td data-title="Male Height (Cm)" class="amt">169.5</td>
+                <td data-title="Temperature (C)" class="amt">24.4</td>
+                <td data-title="Population" class="amt">45,644,023</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="comoros">
+                <td data-title="Country">Comoros</td>
+                <td data-title="Male Height (Cm)" class="amt">166.19</td>
+                <td data-title="Temperature (C)" class="amt">23.99</td>
+                <td data-title="Population" class="amt">734,917</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="costa-rica">
+                <td data-title="Country">Costa Rica</td>
+                <td data-title="Male Height (Cm)" class="amt">168.93</td>
+                <td data-title="Temperature (C)" class="amt">23.85</td>
+                <td data-title="Population" class="amt">4,253,877</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="cote-d-ivoire">
+                <td data-title="Country">Cote d Ivoire</td>
+                <td data-title="Male Height (Cm)" class="amt">166.53</td>
+                <td data-title="Temperature (C)" class="amt">26.3</td>
+                <td data-title="Population" class="amt">20,617,068</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="croatia">
+                <td data-title="Country">Croatia</td>
+                <td data-title="Male Height (Cm)" class="amt">180.78</td>
+                <td data-title="Temperature (C)" class="amt">10.47</td>
+                <td data-title="Population" class="amt">4,489,409</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="cuba">
+                <td data-title="Country">Cuba</td>
+                <td data-title="Male Height (Cm)" class="amt">172.0</td>
+                <td data-title="Temperature (C)" class="amt">25.13</td>
+                <td data-title="Population" class="amt">11,451,652</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="cyprus">
+                <td data-title="Country">Cyprus</td>
+                <td data-title="Male Height (Cm)" class="amt">174.99</td>
+                <td data-title="Temperature (C)" class="amt">18.71</td>
+                <td data-title="Population" class="amt">531,640</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="czech-republic">
+                <td data-title="Country">Czech Republic</td>
+                <td data-title="Male Height (Cm)" class="amt">180.1</td>
+                <td data-title="Temperature (C)" class="amt">7.67</td>
+                <td data-title="Population" class="amt">10,211,904</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="democratic-republic-of-congo">
+                <td data-title="Country">Democratic Republic of Congo</td>
+                <td data-title="Male Height (Cm)" class="amt">166.8</td>
+                <td data-title="Temperature (C)" class="amt">24.04</td>
+                <td data-title="Population" class="amt">68,692,542</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="denmark">
+                <td data-title="Country">Denmark</td>
+                <td data-title="Male Height (Cm)" class="amt">181.39</td>
+                <td data-title="Temperature (C)" class="amt">7.82</td>
+                <td data-title="Population" class="amt">5,500,510</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="djibouti">
+                <td data-title="Country">Djibouti</td>
+                <td data-title="Male Height (Cm)" class="amt">166.57</td>
+                <td data-title="Temperature (C)" class="amt">27.64</td>
+                <td data-title="Population" class="amt">516,055</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="dominican-republic">
+                <td data-title="Country">Dominican Republic</td>
+                <td data-title="Male Height (Cm)" class="amt">172.75</td>
+                <td data-title="Temperature (C)" class="amt">23.93</td>
+                <td data-title="Population" class="amt">9,650,054</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="ecuador">
+                <td data-title="Country">Ecuador</td>
+                <td data-title="Male Height (Cm)" class="amt">167.08</td>
+                <td data-title="Temperature (C)" class="amt">21.33</td>
+                <td data-title="Population" class="amt">14,573,101</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="egypt">
+                <td data-title="Country">Egypt</td>
+                <td data-title="Male Height (Cm)" class="amt">166.68</td>
+                <td data-title="Temperature (C)" class="amt">22.12</td>
+                <td data-title="Population" class="amt">83,082,869</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="el-salvador">
+                <td data-title="Country">El Salvador</td>
+                <td data-title="Male Height (Cm)" class="amt">169.77</td>
+                <td data-title="Temperature (C)" class="amt">24.77</td>
+                <td data-title="Population" class="amt">7,185,218</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="equatorial-guinea">
+                <td data-title="Country">Equatorial Guinea</td>
+                <td data-title="Male Height (Cm)" class="amt">167.36</td>
+                <td data-title="Temperature (C)" class="amt">24.13</td>
+                <td data-title="Population" class="amt">650,702</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="eritrea">
+                <td data-title="Country">Eritrea</td>
+                <td data-title="Male Height (Cm)" class="amt">168.36</td>
+                <td data-title="Temperature (C)" class="amt">26.07</td>
+                <td data-title="Population" class="amt">5,647,168</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="estonia">
+                <td data-title="Country">Estonia</td>
+                <td data-title="Male Height (Cm)" class="amt">181.59</td>
+                <td data-title="Temperature (C)" class="amt">5.03</td>
+                <td data-title="Population" class="amt">1,299,371</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="ethiopia">
+                <td data-title="Country">Ethiopia</td>
+                <td data-title="Male Height (Cm)" class="amt">166.23</td>
+                <td data-title="Temperature (C)" class="amt">22.37</td>
+                <td data-title="Population" class="amt">85,237,338</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="fiji">
+                <td data-title="Country">Fiji</td>
+                <td data-title="Male Height (Cm)" class="amt">173.9</td>
+                <td data-title="Temperature (C)" class="amt">23.37</td>
+                <td data-title="Population" class="amt">944,720</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="finland">
+                <td data-title="Country">Finland</td>
+                <td data-title="Male Height (Cm)" class="amt">179.59</td>
+                <td data-title="Temperature (C)" class="amt">1.35</td>
+                <td data-title="Population" class="amt">5,250,275</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="france">
+                <td data-title="Country">France</td>
+                <td data-title="Male Height (Cm)" class="amt">179.74</td>
+                <td data-title="Temperature (C)" class="amt">10.54</td>
+                <td data-title="Population" class="amt">64,057,792</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="gabon">
+                <td data-title="Country">Gabon</td>
+                <td data-title="Male Height (Cm)" class="amt">167.94</td>
+                <td data-title="Temperature (C)" class="amt">25.0</td>
+                <td data-title="Population" class="amt">1,514,993</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="gambia">
+                <td data-title="Country">Gambia</td>
+                <td data-title="Male Height (Cm)" class="amt">165.4</td>
+                <td data-title="Temperature (C)" class="amt">26.77</td>
+                <td data-title="Population" class="amt">1,782,893</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="georgia">
+                <td data-title="Country">Georgia</td>
+                <td data-title="Male Height (Cm)" class="amt">174.34</td>
+                <td data-title="Temperature (C)" class="amt">7.36</td>
+                <td data-title="Population" class="amt">4,615,807</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="germany">
+                <td data-title="Country">Germany</td>
+                <td data-title="Male Height (Cm)" class="amt">179.88</td>
+                <td data-title="Temperature (C)" class="amt">8.5</td>
+                <td data-title="Population" class="amt">82,329,758</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="ghana">
+                <td data-title="Country">Ghana</td>
+                <td data-title="Male Height (Cm)" class="amt">168.85</td>
+                <td data-title="Temperature (C)" class="amt">27.25</td>
+                <td data-title="Population" class="amt">23,832,495</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="greece">
+                <td data-title="Country">Greece</td>
+                <td data-title="Male Height (Cm)" class="amt">177.32</td>
+                <td data-title="Temperature (C)" class="amt">13.66</td>
+                <td data-title="Population" class="amt">10,737,428</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="guatemala">
+                <td data-title="Country">Guatemala</td>
+                <td data-title="Male Height (Cm)" class="amt">163.41</td>
+                <td data-title="Temperature (C)" class="amt">23.07</td>
+                <td data-title="Population" class="amt">13,276,517</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="guinea">
+                <td data-title="Country">Guinea</td>
+                <td data-title="Male Height (Cm)" class="amt">167.54</td>
+                <td data-title="Temperature (C)" class="amt">25.55</td>
+                <td data-title="Population" class="amt">10,057,975</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="guinea-bissau">
+                <td data-title="Country">Guinea Bissau</td>
+                <td data-title="Male Height (Cm)" class="amt">167.9</td>
+                <td data-title="Temperature (C)" class="amt">26.61</td>
+                <td data-title="Population" class="amt">1,533,964</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="guyana">
+                <td data-title="Country">Guyana</td>
+                <td data-title="Male Height (Cm)" class="amt">170.21</td>
+                <td data-title="Temperature (C)" class="amt">25.8</td>
+                <td data-title="Population" class="amt">772,298</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="haiti">
+                <td data-title="Country">Haiti</td>
+                <td data-title="Male Height (Cm)" class="amt">172.64</td>
+                <td data-title="Temperature (C)" class="amt">24.48</td>
+                <td data-title="Population" class="amt">9,035,536</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="honduras">
+                <td data-title="Country">Honduras</td>
+                <td data-title="Male Height (Cm)" class="amt">166.39</td>
+                <td data-title="Temperature (C)" class="amt">23.39</td>
+                <td data-title="Population" class="amt">7,792,854</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="hungary">
+                <td data-title="Country">Hungary</td>
+                <td data-title="Male Height (Cm)" class="amt">177.26</td>
+                <td data-title="Temperature (C)" class="amt">10.06</td>
+                <td data-title="Population" class="amt">9,905,596</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="iceland">
+                <td data-title="Country">Iceland</td>
+                <td data-title="Male Height (Cm)" class="amt">180.49</td>
+                <td data-title="Temperature (C)" class="amt">1.35</td>
+                <td data-title="Population" class="amt">306,694</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="india">
+                <td data-title="Country">India</td>
+                <td data-title="Male Height (Cm)" class="amt">164.95</td>
+                <td data-title="Temperature (C)" class="amt">23.95</td>
+                <td data-title="Population" class="amt">1,166,079,220</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="indonesia">
+                <td data-title="Country">Indonesia</td>
+                <td data-title="Male Height (Cm)" class="amt">163.55</td>
+                <td data-title="Temperature (C)" class="amt">25.72</td>
+                <td data-title="Population" class="amt">240,271,522</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="iran">
+                <td data-title="Country">Iran</td>
+                <td data-title="Male Height (Cm)" class="amt">173.57</td>
+                <td data-title="Temperature (C)" class="amt">16.93</td>
+                <td data-title="Population" class="amt">66,429,284</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="iraq">
+                <td data-title="Country">Iraq</td>
+                <td data-title="Male Height (Cm)" class="amt">170.43</td>
+                <td data-title="Temperature (C)" class="amt">21.58</td>
+                <td data-title="Population" class="amt">31,129,225</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="ireland">
+                <td data-title="Country">Ireland</td>
+                <td data-title="Male Height (Cm)" class="amt">178.93</td>
+                <td data-title="Temperature (C)" class="amt">9.11</td>
+                <td data-title="Population" class="amt">4,203,200</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="israel">
+                <td data-title="Country">Israel</td>
+                <td data-title="Male Height (Cm)" class="amt">176.86</td>
+                <td data-title="Temperature (C)" class="amt">19.7</td>
+                <td data-title="Population" class="amt">7,233,701</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="italy">
+                <td data-title="Country">Italy</td>
+                <td data-title="Male Height (Cm)" class="amt">177.77</td>
+                <td data-title="Temperature (C)" class="amt">11.5</td>
+                <td data-title="Population" class="amt">58,126,212</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="jamaica">
+                <td data-title="Country">Jamaica</td>
+                <td data-title="Male Height (Cm)" class="amt">174.53</td>
+                <td data-title="Temperature (C)" class="amt">24.47</td>
+                <td data-title="Population" class="amt">2,825,928</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="japan">
+                <td data-title="Country">Japan</td>
+                <td data-title="Male Height (Cm)" class="amt">170.82</td>
+                <td data-title="Temperature (C)" class="amt">10.36</td>
+                <td data-title="Population" class="amt">127,078,679</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="jordan">
+                <td data-title="Country">Jordan</td>
+                <td data-title="Male Height (Cm)" class="amt">171.03</td>
+                <td data-title="Temperature (C)" class="amt">18.35</td>
+                <td data-title="Population" class="amt">6,342,948</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="kazakhstan">
+                <td data-title="Country">Kazakhstan</td>
+                <td data-title="Male Height (Cm)" class="amt">171.14</td>
+                <td data-title="Temperature (C)" class="amt">5.99</td>
+                <td data-title="Population" class="amt">15,399,437</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="kenya">
+                <td data-title="Country">Kenya</td>
+                <td data-title="Male Height (Cm)" class="amt">169.64</td>
+                <td data-title="Temperature (C)" class="amt">24.5</td>
+                <td data-title="Population" class="amt">39,002,772</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="kuwait">
+                <td data-title="Country">Kuwait</td>
+                <td data-title="Male Height (Cm)" class="amt">172.07</td>
+                <td data-title="Temperature (C)" class="amt">25.15</td>
+                <td data-title="Population" class="amt">2,691,158</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="kyrgyzstan">
+                <td data-title="Country">Kyrgyzstan</td>
+                <td data-title="Male Height (Cm)" class="amt">171.24</td>
+                <td data-title="Temperature (C)" class="amt">1.09</td>
+                <td data-title="Population" class="amt">5,431,747</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="laos">
+                <td data-title="Country">Laos</td>
+                <td data-title="Male Height (Cm)" class="amt">160.52</td>
+                <td data-title="Temperature (C)" class="amt">23.22</td>
+                <td data-title="Population" class="amt">6,834,942</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="latvia">
+                <td data-title="Country">Latvia</td>
+                <td data-title="Male Height (Cm)" class="amt">181.42</td>
+                <td data-title="Temperature (C)" class="amt">5.63</td>
+                <td data-title="Population" class="amt">2,231,503</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="lebanon">
+                <td data-title="Country">Lebanon</td>
+                <td data-title="Male Height (Cm)" class="amt">174.39</td>
+                <td data-title="Temperature (C)" class="amt">15.61</td>
+                <td data-title="Population" class="amt">4,017,095</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="lesotho">
+                <td data-title="Country">Lesotho</td>
+                <td data-title="Male Height (Cm)" class="amt">165.59</td>
+                <td data-title="Temperature (C)" class="amt">11.97</td>
+                <td data-title="Population" class="amt">2,130,819</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="liberia">
+                <td data-title="Country">Liberia</td>
+                <td data-title="Male Height (Cm)" class="amt">163.66</td>
+                <td data-title="Temperature (C)" class="amt">25.25</td>
+                <td data-title="Population" class="amt">3,441,790</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="libya">
+                <td data-title="Country">Libya</td>
+                <td data-title="Male Height (Cm)" class="amt">173.53</td>
+                <td data-title="Temperature (C)" class="amt">21.9</td>
+                <td data-title="Population" class="amt">6,310,434</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="lithuania">
+                <td data-title="Country">Lithuania</td>
+                <td data-title="Male Height (Cm)" class="amt">179.03</td>
+                <td data-title="Temperature (C)" class="amt">6.24</td>
+                <td data-title="Population" class="amt">3,555,179</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="luxembourg">
+                <td data-title="Country">Luxembourg</td>
+                <td data-title="Male Height (Cm)" class="amt">177.86</td>
+                <td data-title="Temperature (C)" class="amt">8.88</td>
+                <td data-title="Population" class="amt">491,775</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="macedonia">
+                <td data-title="Country">Macedonia</td>
+                <td data-title="Male Height (Cm)" class="amt">178.33</td>
+                <td data-title="Temperature (C)" class="amt">9.85</td>
+                <td data-title="Population" class="amt">2,066,718</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="madagascar">
+                <td data-title="Country">Madagascar</td>
+                <td data-title="Male Height (Cm)" class="amt">161.55</td>
+                <td data-title="Temperature (C)" class="amt">22.01</td>
+                <td data-title="Population" class="amt">20,653,556</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="malawi">
+                <td data-title="Country">Malawi</td>
+                <td data-title="Male Height (Cm)" class="amt">162.23</td>
+                <td data-title="Temperature (C)" class="amt">21.98</td>
+                <td data-title="Population" class="amt">14,268,711</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="malaysia">
+                <td data-title="Country">Malaysia</td>
+                <td data-title="Male Height (Cm)" class="amt">167.88</td>
+                <td data-title="Temperature (C)" class="amt">25.14</td>
+                <td data-title="Population" class="amt">25,715,819</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="mali">
+                <td data-title="Country">Mali</td>
+                <td data-title="Male Height (Cm)" class="amt">171.12</td>
+                <td data-title="Temperature (C)" class="amt">28.3</td>
+                <td data-title="Population" class="amt">12,666,987</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="mauritania">
+                <td data-title="Country">Mauritania</td>
+                <td data-title="Male Height (Cm)" class="amt">163.28</td>
+                <td data-title="Temperature (C)" class="amt">27.69</td>
+                <td data-title="Population" class="amt">3,129,486</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="mauritius">
+                <td data-title="Country">Mauritius</td>
+                <td data-title="Male Height (Cm)" class="amt">170.5</td>
+                <td data-title="Temperature (C)" class="amt">23.13</td>
+                <td data-title="Population" class="amt">1,296,000</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="mexico">
+                <td data-title="Country">Mexico</td>
+                <td data-title="Male Height (Cm)" class="amt">169.01</td>
+                <td data-title="Temperature (C)" class="amt">20.54</td>
+                <td data-title="Population" class="amt">111,211,789</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="moldova">
+                <td data-title="Country">Moldova</td>
+                <td data-title="Male Height (Cm)" class="amt">175.49</td>
+                <td data-title="Temperature (C)" class="amt">9.67</td>
+                <td data-title="Population" class="amt">4,320,748</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="mongolia">
+                <td data-title="Country">Mongolia</td>
+                <td data-title="Male Height (Cm)" class="amt">169.07</td>
+                <td data-title="Temperature (C)" class="amt">-0.5</td>
+                <td data-title="Population" class="amt">3,041,142</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="morocco">
+                <td data-title="Country">Morocco</td>
+                <td data-title="Male Height (Cm)" class="amt">170.4</td>
+                <td data-title="Temperature (C)" class="amt">17.23</td>
+                <td data-title="Population" class="amt">34,859,364</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="mozambique">
+                <td data-title="Country">Mozambique</td>
+                <td data-title="Male Height (Cm)" class="amt">164.8</td>
+                <td data-title="Temperature (C)" class="amt">23.69</td>
+                <td data-title="Population" class="amt">21,669,278</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="myanmar">
+                <td data-title="Country">Myanmar</td>
+                <td data-title="Male Height (Cm)" class="amt">164.67</td>
+                <td data-title="Temperature (C)" class="amt">22.96</td>
+                <td data-title="Population" class="amt">48,137,741</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="namibia">
+                <td data-title="Country">Namibia</td>
+                <td data-title="Male Height (Cm)" class="amt">166.96</td>
+                <td data-title="Temperature (C)" class="amt">20.04</td>
+                <td data-title="Population" class="amt">2,108,665</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="nepal">
+                <td data-title="Country">Nepal</td>
+                <td data-title="Male Height (Cm)" class="amt">162.32</td>
+                <td data-title="Temperature (C)" class="amt">12.74</td>
+                <td data-title="Population" class="amt">28,563,377</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="netherlands">
+                <td data-title="Country">Netherlands</td>
+                <td data-title="Male Height (Cm)" class="amt">182.54</td>
+                <td data-title="Temperature (C)" class="amt">9.2</td>
+                <td data-title="Population" class="amt">16,715,999</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="new-zealand">
+                <td data-title="Country">New Zealand</td>
+                <td data-title="Male Height (Cm)" class="amt">177.74</td>
+                <td data-title="Temperature (C)" class="amt">9.98</td>
+                <td data-title="Population" class="amt">4,213,418</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="nicaragua">
+                <td data-title="Country">Nicaragua</td>
+                <td data-title="Male Height (Cm)" class="amt">166.71</td>
+                <td data-title="Temperature (C)" class="amt">24.59</td>
+                <td data-title="Population" class="amt">5,891,199</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="niger">
+                <td data-title="Country">Niger</td>
+                <td data-title="Male Height (Cm)" class="amt">167.68</td>
+                <td data-title="Temperature (C)" class="amt">27.24</td>
+                <td data-title="Population" class="amt">15,306,252</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="nigeria">
+                <td data-title="Country">Nigeria</td>
+                <td data-title="Male Height (Cm)" class="amt">165.91</td>
+                <td data-title="Temperature (C)" class="amt">26.78</td>
+                <td data-title="Population" class="amt">149,229,090</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="north-korea">
+                <td data-title="Country">North Korea</td>
+                <td data-title="Male Height (Cm)" class="amt">171.99</td>
+                <td data-title="Temperature (C)" class="amt">4.86</td>
+                <td data-title="Population" class="amt">22,665,345</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="norway">
+                <td data-title="Country">Norway</td>
+                <td data-title="Male Height (Cm)" class="amt">179.75</td>
+                <td data-title="Temperature (C)" class="amt">0.75</td>
+                <td data-title="Population" class="amt">4,676,305</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="oman">
+                <td data-title="Country">Oman</td>
+                <td data-title="Male Height (Cm)" class="amt">169.16</td>
+                <td data-title="Temperature (C)" class="amt">25.45</td>
+                <td data-title="Population" class="amt">3,418,085</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="pakistan">
+                <td data-title="Country">Pakistan</td>
+                <td data-title="Male Height (Cm)" class="amt">166.95</td>
+                <td data-title="Temperature (C)" class="amt">19.98</td>
+                <td data-title="Population" class="amt">176,242,949</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="panama">
+                <td data-title="Country">Panama</td>
+                <td data-title="Male Height (Cm)" class="amt">168.49</td>
+                <td data-title="Temperature (C)" class="amt">24.72</td>
+                <td data-title="Population" class="amt">3,360,474</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="papua-new-guinea">
+                <td data-title="Country">Papua New Guinea</td>
+                <td data-title="Male Height (Cm)" class="amt">163.57</td>
+                <td data-title="Temperature (C)" class="amt">25.05</td>
+                <td data-title="Population" class="amt">6,057,263</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="paraguay">
+                <td data-title="Country">Paraguay</td>
+                <td data-title="Male Height (Cm)" class="amt">172.83</td>
+                <td data-title="Temperature (C)" class="amt">23.48</td>
+                <td data-title="Population" class="amt">6,995,655</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="peru">
+                <td data-title="Country">Peru</td>
+                <td data-title="Male Height (Cm)" class="amt">165.23</td>
+                <td data-title="Temperature (C)" class="amt">19.46</td>
+                <td data-title="Population" class="amt">29,546,963</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="philippines">
+                <td data-title="Country">Philippines</td>
+                <td data-title="Male Height (Cm)" class="amt">163.23</td>
+                <td data-title="Temperature (C)" class="amt">25.33</td>
+                <td data-title="Population" class="amt">97,976,603</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="poland">
+                <td data-title="Country">Poland</td>
+                <td data-title="Male Height (Cm)" class="amt">177.33</td>
+                <td data-title="Temperature (C)" class="amt">7.87</td>
+                <td data-title="Population" class="amt">38,482,919</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="portugal">
+                <td data-title="Country">Portugal</td>
+                <td data-title="Male Height (Cm)" class="amt">172.93</td>
+                <td data-title="Temperature (C)" class="amt">14.97</td>
+                <td data-title="Population" class="amt">10,707,924</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="puerto-rico">
+                <td data-title="Country">Puerto Rico</td>
+                <td data-title="Male Height (Cm)" class="amt">172.08</td>
+                <td data-title="Temperature (C)" class="amt">24.28</td>
+                <td data-title="Population" class="amt">3,971,020</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="qatar">
+                <td data-title="Country">Qatar</td>
+                <td data-title="Male Height (Cm)" class="amt">170.48</td>
+                <td data-title="Temperature (C)" class="amt">26.92</td>
+                <td data-title="Population" class="amt">833,285</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="republic-of-congo">
+                <td data-title="Country">Republic of Congo</td>
+                <td data-title="Male Height (Cm)" class="amt">167.45</td>
+                <td data-title="Temperature (C)" class="amt">24.52</td>
+                <td data-title="Population" class="amt">4,012,809</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="romania">
+                <td data-title="Country">Romania</td>
+                <td data-title="Male Height (Cm)" class="amt">174.74</td>
+                <td data-title="Temperature (C)" class="amt">8.81</td>
+                <td data-title="Population" class="amt">22,215,421</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="russian-federation">
+                <td data-title="Country">Russian Federation</td>
+                <td data-title="Male Height (Cm)" class="amt">176.46</td>
+                <td data-title="Temperature (C)" class="amt">-6.32</td>
+                <td data-title="Population" class="amt">140,041,247</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="rwanda">
+                <td data-title="Country">Rwanda</td>
+                <td data-title="Male Height (Cm)" class="amt">162.68</td>
+                <td data-title="Temperature (C)" class="amt">19.01</td>
+                <td data-title="Population" class="amt">10,473,282</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="saint-vincent-and-the-grenadines">
+                <td data-title="Country">Saint Vincent and the Grenadines</td>
+                <td data-title="Male Height (Cm)" class="amt">172.78</td>
+                <td data-title="Temperature (C)" class="amt">26.82</td>
+                <td data-title="Population" class="amt">109,000</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="saudi-arabia">
+                <td data-title="Country">Saudi Arabia</td>
+                <td data-title="Male Height (Cm)" class="amt">167.67</td>
+                <td data-title="Temperature (C)" class="amt">24.65</td>
+                <td data-title="Population" class="amt">28,686,633</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="senegal">
+                <td data-title="Country">Senegal</td>
+                <td data-title="Male Height (Cm)" class="amt">173.14</td>
+                <td data-title="Temperature (C)" class="amt">27.87</td>
+                <td data-title="Population" class="amt">13,711,597</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="serbia">
+                <td data-title="Country">Serbia</td>
+                <td data-title="Male Height (Cm)" class="amt">180.57</td>
+                <td data-title="Temperature (C)" class="amt">10.18</td>
+                <td data-title="Population" class="amt">7,379,339</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="sierra-leone">
+                <td data-title="Country">Sierra Leone</td>
+                <td data-title="Male Height (Cm)" class="amt">164.41</td>
+                <td data-title="Temperature (C)" class="amt">26.04</td>
+                <td data-title="Population" class="amt">6,440,053</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="slovakia">
+                <td data-title="Country">Slovakia</td>
+                <td data-title="Male Height (Cm)" class="amt">179.5</td>
+                <td data-title="Temperature (C)" class="amt">7.27</td>
+                <td data-title="Population" class="amt">5,410,000</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="slovenia">
+                <td data-title="Country">Slovenia</td>
+                <td data-title="Male Height (Cm)" class="amt">179.8</td>
+                <td data-title="Temperature (C)" class="amt">8.04</td>
+                <td data-title="Population" class="amt">2,005,692</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="solomon-islands">
+                <td data-title="Country">Solomon Islands</td>
+                <td data-title="Male Height (Cm)" class="amt">164.14</td>
+                <td data-title="Temperature (C)" class="amt">25.68</td>
+                <td data-title="Population" class="amt">595,613</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="somalia">
+                <td data-title="Country">Somalia</td>
+                <td data-title="Male Height (Cm)" class="amt">166.6</td>
+                <td data-title="Temperature (C)" class="amt">26.77</td>
+                <td data-title="Population" class="amt">9,832,017</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="south-africa">
+                <td data-title="Country">South Africa</td>
+                <td data-title="Male Height (Cm)" class="amt">166.68</td>
+                <td data-title="Temperature (C)" class="amt">17.6</td>
+                <td data-title="Population" class="amt">49,052,489</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="south-korea">
+                <td data-title="Country">South Korea</td>
+                <td data-title="Male Height (Cm)" class="amt">174.92</td>
+                <td data-title="Temperature (C)" class="amt">10.66</td>
+                <td data-title="Population" class="amt">48,508,972</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="spain">
+                <td data-title="Country">Spain</td>
+                <td data-title="Male Height (Cm)" class="amt">176.59</td>
+                <td data-title="Temperature (C)" class="amt">13.03</td>
+                <td data-title="Population" class="amt">40,525,002</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="sri-lanka">
+                <td data-title="Country">Sri Lanka</td>
+                <td data-title="Male Height (Cm)" class="amt">165.69</td>
+                <td data-title="Temperature (C)" class="amt">26.76</td>
+                <td data-title="Population" class="amt">21,324,791</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="sudan">
+                <td data-title="Country">Sudan</td>
+                <td data-title="Male Height (Cm)" class="amt">166.63</td>
+                <td data-title="Temperature (C)" class="amt">26.82</td>
+                <td data-title="Population" class="amt">25,946,220</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="suriname">
+                <td data-title="Country">Suriname</td>
+                <td data-title="Male Height (Cm)" class="amt">172.72</td>
+                <td data-title="Temperature (C)" class="amt">25.77</td>
+                <td data-title="Population" class="amt">481,267</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="swaziland">
+                <td data-title="Country">Swaziland</td>
+                <td data-title="Male Height (Cm)" class="amt">168.13</td>
+                <td data-title="Temperature (C)" class="amt">20.41</td>
+                <td data-title="Population" class="amt">1,123,913</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="sweden">
+                <td data-title="Country">Sweden</td>
+                <td data-title="Male Height (Cm)" class="amt">179.74</td>
+                <td data-title="Temperature (C)" class="amt">1.55</td>
+                <td data-title="Population" class="amt">9,059,651</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="switzerland">
+                <td data-title="Country">Switzerland</td>
+                <td data-title="Male Height (Cm)" class="amt">178.42</td>
+                <td data-title="Temperature (C)" class="amt">4.75</td>
+                <td data-title="Population" class="amt">7,604,467</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="syrian-arab-republic">
+                <td data-title="Country">Syrian Arab Republic</td>
+                <td data-title="Male Height (Cm)" class="amt">170.43</td>
+                <td data-title="Temperature (C)" class="amt">17.65</td>
+                <td data-title="Population" class="amt">20,178,485</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="tajikistan">
+                <td data-title="Country">Tajikistan</td>
+                <td data-title="Male Height (Cm)" class="amt">171.26</td>
+                <td data-title="Temperature (C)" class="amt">3.03</td>
+                <td data-title="Population" class="amt">7,349,145</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="tanzania">
+                <td data-title="Country">Tanzania</td>
+                <td data-title="Male Height (Cm)" class="amt">164.8</td>
+                <td data-title="Temperature (C)" class="amt">22.31</td>
+                <td data-title="Population" class="amt">41,048,532</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="thailand">
+                <td data-title="Country">Thailand</td>
+                <td data-title="Male Height (Cm)" class="amt">169.16</td>
+                <td data-title="Temperature (C)" class="amt">26.25</td>
+                <td data-title="Population" class="amt">65,905,410</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="timor-leste">
+                <td data-title="Country">Timor-Leste</td>
+                <td data-title="Male Height (Cm)" class="amt">159.79</td>
+                <td data-title="Temperature (C)" class="amt">24.97</td>
+                <td data-title="Population" class="amt">1,131,612</td>
+                <td data-title="Region">South-East Asia</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="togo">
+                <td data-title="Country">Togo</td>
+                <td data-title="Male Height (Cm)" class="amt">168.33</td>
+                <td data-title="Temperature (C)" class="amt">26.8</td>
+                <td data-title="Population" class="amt">6,019,877</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="trinidad-and-tobago">
+                <td data-title="Country">Trinidad and Tobago</td>
+                <td data-title="Male Height (Cm)" class="amt">173.74</td>
+                <td data-title="Temperature (C)" class="amt">25.86</td>
+                <td data-title="Population" class="amt">1,310,000</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="tunisia">
+                <td data-title="Country">Tunisia</td>
+                <td data-title="Male Height (Cm)" class="amt">173.95</td>
+                <td data-title="Temperature (C)" class="amt">19.36</td>
+                <td data-title="Population" class="amt">10,486,339</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="turkey">
+                <td data-title="Country">Turkey</td>
+                <td data-title="Male Height (Cm)" class="amt">174.21</td>
+                <td data-title="Temperature (C)" class="amt">10.93</td>
+                <td data-title="Population" class="amt">76,805,524</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="turkmenistan">
+                <td data-title="Country">Turkmenistan</td>
+                <td data-title="Male Height (Cm)" class="amt">171.97</td>
+                <td data-title="Temperature (C)" class="amt">15.22</td>
+                <td data-title="Population" class="amt">4,884,887</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Upper-middle-income</td>	
+            </tr>
+            
+            <tr class="uganda">
+                <td data-title="Country">Uganda</td>
+                <td data-title="Male Height (Cm)" class="amt">165.62</td>
+                <td data-title="Temperature (C)" class="amt">22.6</td>
+                <td data-title="Population" class="amt">32,369,558</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+            <tr class="ukraine">
+                <td data-title="Country">Ukraine</td>
+                <td data-title="Male Height (Cm)" class="amt">178.46</td>
+                <td data-title="Temperature (C)" class="amt">8.21</td>
+                <td data-title="Population" class="amt">45,700,395</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="united-arab-emirates">
+                <td data-title="Country">United Arab Emirates</td>
+                <td data-title="Male Height (Cm)" class="amt">170.46</td>
+                <td data-title="Temperature (C)" class="amt">26.83</td>
+                <td data-title="Population" class="amt">4,798,491</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="united-kingdom">
+                <td data-title="Country">United Kingdom</td>
+                <td data-title="Male Height (Cm)" class="amt">177.49</td>
+                <td data-title="Temperature (C)" class="amt">8.31</td>
+                <td data-title="Population" class="amt">62,262,000</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="uruguay">
+                <td data-title="Country">Uruguay</td>
+                <td data-title="Male Height (Cm)" class="amt">173.43</td>
+                <td data-title="Temperature (C)" class="amt">17.57</td>
+                <td data-title="Population" class="amt">3,494,382</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="usa">
+                <td data-title="Country">USA</td>
+                <td data-title="Male Height (Cm)" class="amt">177.13</td>
+                <td data-title="Temperature (C)" class="amt">6.75</td>
+                <td data-title="Population" class="amt">313,973,000</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="uzbekistan">
+                <td data-title="Country">Uzbekistan</td>
+                <td data-title="Male Height (Cm)" class="amt">169.38</td>
+                <td data-title="Temperature (C)" class="amt">12.52</td>
+                <td data-title="Population" class="amt">27,606,007</td>
+                <td data-title="Region">Europe</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="vanuatu">
+                <td data-title="Country">Vanuatu</td>
+                <td data-title="Male Height (Cm)" class="amt">168.09</td>
+                <td data-title="Temperature (C)" class="amt">23.84</td>
+                <td data-title="Population" class="amt">218,519</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="venezuela">
+                <td data-title="Country">Venezuela</td>
+                <td data-title="Male Height (Cm)" class="amt">171.59</td>
+                <td data-title="Temperature (C)" class="amt">25.32</td>
+                <td data-title="Population" class="amt">26,814,843</td>
+                <td data-title="Region">Americas</td>
+                <td data-title="Wealth">High-income</td>	
+            </tr>
+            
+            <tr class="vietnam">
+                <td data-title="Country">Vietnam</td>
+                <td data-title="Male Height (Cm)" class="amt">164.45</td>
+                <td data-title="Temperature (C)" class="amt">24.07</td>
+                <td data-title="Population" class="amt">86,967,524</td>
+                <td data-title="Region">Western Pacific</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="yemen">
+                <td data-title="Country">Yemen</td>
+                <td data-title="Male Height (Cm)" class="amt">159.89</td>
+                <td data-title="Temperature (C)" class="amt">23.16</td>
+                <td data-title="Population" class="amt">23,822,783</td>
+                <td data-title="Region">Eastern Mediterranean</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="zambia">
+                <td data-title="Country">Zambia</td>
+                <td data-title="Male Height (Cm)" class="amt">166.52</td>
+                <td data-title="Temperature (C)" class="amt">21.58</td>
+                <td data-title="Population" class="amt">11,862,740</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Lower-middle-income</td>	
+            </tr>
+            
+            <tr class="zimbabwe">
+                <td data-title="Country">Zimbabwe</td>
+                <td data-title="Male Height (Cm)" class="amt">168.59</td>
+                <td data-title="Temperature (C)" class="amt">21.03</td>
+                <td data-title="Population" class="amt">12,619,600</td>
+                <td data-title="Region">Africa</td>
+                <td data-title="Wealth">Low-income</td>	
+            </tr>
+            
+
+        </table>
+    </div>
+
+    
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>Some countries excluded when consistent height and temperature data were not available. </p>
+    </div>
+    
+
+    <div class="footer">
+        <p>Data: <a href="http://www.ncdrisc.org/d-height.html">NCD Risk Fact Collaboration</a> (height); <a href="http://data.worldbank.org/data-catalog/cckp_historical_data">World Bank</a> (temperatures); <a href="http://data.worldbank.org/country">World Bank</a> (country region/income categories)</p>
+        <p>Credit: Matt Stiles/<a href="http://www.thedailyviz.com">The Daily Viz</a></p>
+    </div>
+
+
+
+    
+
+    
+    
+    
+    
+    <script type="text/javascript" src="js/graphic-footer.js?1470731610"></script>
+
+
+</body>
+</html>

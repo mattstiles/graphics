@@ -1,0 +1,126 @@
+@import "base";
+
+.bars line {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #e6e6e6;
+}
+
+.dots circle {
+    stroke-width: 1px;
+    stroke: #fff;
+    fill: #999;
+}
+
+.dots-saenuri circle {
+    stroke-width: 1px;
+    stroke: #fff;
+    fill: #c72831;
+}
+
+.dots-minjoo circle {
+    stroke-width: 1px;
+    stroke: #fff;
+    fill: #0073be;
+}
+
+.dots-justice circle {
+    stroke-width: 1px;
+    stroke: #fff;
+    fill: #fdd645;
+}
+
+.dots-peoples circle {
+    stroke-width: 1px;
+    stroke: #fff;
+    fill: #006241;
+}
+
+.value text {
+    font-size: 11px;
+    fill: #999;
+	display:none;
+}
+
+.shadow text {
+    font-size: 11px;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 5px;
+	display:none;
+}
+
+.leg-avg-line  {
+    //stroke: #c33826;
+	stroke: #999;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: .5;
+	stroke-dasharray: 5, 5;
+}
+
+.label-top {
+    font-style: italic;
+    fill: #999;
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.label-top-avg {
+    fill: #999;
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.label-top-assembly {
+	font-weight:bold;
+    fill: #999;
+    font-size: 11px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ideology-ranges {
+    rect {
+        &.liberal { fill: #0073be; opacity: .1; }
+        &.conservative { fill: #c72831; opacity: .1;  }
+		&.moderate { fill: #999999; opacity: .1;  }
+        }
+    }
+
+
+@media screen and (min-width: 500px) {
+	
+	.shadow text {
+		display:inline;
+	}
+	
+	.label-top-public {
+		display: inline;
+	}
+	
+	.label-top {
+	    font-size: 12px;
+		display: inline;
+	    -webkit-font-smoothing: antialiased;
+	}
+	
+    .key {
+        display: inline;
+    }
+	
+	.label-top-avg {
+	    fill: #999;
+	    font-size: 11px;
+	}
+	
+	.value text {
+	    font-size: 12px;
+	    font-weight: bold;
+	    fill: #999;
+		display:inline;
+		
+	    .men& { fill: @orange3; display: inline;}
+	    .women& { fill: @teal3; display: inline;}
+		.avg& { fill: #999; display: inline;}
+	}
+}

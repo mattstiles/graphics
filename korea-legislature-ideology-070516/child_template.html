@@ -1,0 +1,40 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
+
+	<div class="legend">
+		<ul class="key">
+			<li class="key-item">
+				<b style="background-color: #0073be;"></b>
+				<label>Minjoo Party</label></li>
+				<li class="key-item">
+					<b style="background-color: #999999;"></b>
+					<label>Korean Public</label>
+				</li>
+			<li class="key-item">
+				<b style="background-color: #c72831;"></b>
+				<label>Saenuri Party</label>
+			</li>
+			
+		</ul>
+	</div>
+    
+	<div id="dot-chart" class="graphic">  
+    </div>
+
+    <div class="footer">
+		{% if COPY.labels.footnote %}<p>Notes: {{ COPY.labels.footnote|smarty }}</p>{% endif %}
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+    <script type="text/javascript">
+        var DATA = {{ COPY.data.json() }};
+        var LABELS = {{ COPY.labels.json() }};
+		
+    </script>
+
+{% endblock content %}
