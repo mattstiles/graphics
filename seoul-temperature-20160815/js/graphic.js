@@ -236,8 +236,8 @@ var renderStackedColumnChart = function(config) {
 	    var jan_start = d3.time.format('%m/%d/%y').parse('1/1/16'),
 	        jan_end = d3.time.format('%m/%d/%y').parse('1/1/16'),
 	        aug_start = d3.time.format('%m/%d/%y').parse('8/1/16'),
-	        aug_end = d3.time.format('%m/%d/%y').parse('8/16/16'),
-			aug_label = d3.time.format('%m/%d/%y').parse('8/9/16'),
+	        aug_end = d3.time.format('%m/%d/%y').parse('8/23/16'),
+			aug_label = d3.time.format('%m/%d/%y').parse('8/13/16'),
 			f_label = d3.time.format('%m/%d/%y').parse('1/10/16');
 			
 			

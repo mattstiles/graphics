@@ -1,0 +1,32 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+	
+	<div class='my-legend'>
+		<div class='legend-scale'>
+		  <ul class='legend-labels'>
+		    <li><span style='background:#FFFFB2;'></span>5m</li>
+		    <li><span style='background:#FED976;'></span>10</li>
+		    <li><span style='background:#FEB24C;'></span>15</li>
+		    <li><span style='background:#FD8D3C;'></span>20</li>
+		    <li><span style='background:#FC4E2A;'></span>30</li>
+		    <li><span style='background:#E31A1C;'></span>40</li>
+		    <li><span style='background:#B10026;'></span>170</li>
+		  </ul>
+		</div>
+	</div>
+	
+	<div id="graphic" class="graphic"> 
+		
+		
+<iframe width="100%" height="720" frameborder="0" src="https://stiles.carto.com/viz/d2da97d4-65bb-11e6-a1a6-0ef24382571b/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>	
+  
+    </div>
+
+    <div class="footer">
+		{% if COPY.labels.footnote %}<p>Notes: {{ COPY.labels.footnote|smarty }}</p>{% endif %}
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}

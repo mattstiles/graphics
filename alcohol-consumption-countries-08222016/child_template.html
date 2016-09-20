@@ -1,0 +1,395 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1 class="head">{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+	{% if COPY.labels.headmobile %}<h1 class="headmobile">{{ COPY.labels.headmobile|smarty }}</h1>{% endif %}
+	{% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+	
+
+    <div class="graphic">
+		
+		<h3 class="africa">Africa</h3>
+			
+        <table id="africa-table">
+            <thead>
+                <tr>
+                    <th class="country country-mobile sort-default">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_country }}</div>
+                    </th>
+                    <th class="rank">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_rank }}</div>
+                    </th>
+                    <!-- <th class="income">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_region }}</div>
+                    </th> -->
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_beer }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_spirits }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_wine }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_other }}</div>
+                    </th>
+                    <th class="amt total">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_total }}</div>
+                    </th>
+                </tr>
+            </thead>
+			
+            {% for row in COPY.data if row.region == 'Africa' %}
+            <tr class="country-{{ row.country|classify}} country-mobile {{ loop.cycle('odd', 'even')}}">
+                <td data-title="{{ COPY.labels.hdr_country}}"  class="country country-mobile">{{ row.country }}</td>
+                <!-- <td data-title="{{ COPY.labels.hdr_region }}" class="region">{{ row.region }}</td> -->
+                <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
+                <td data-title="{{ COPY.labels.hdr_beer }}" class="amt bg bg-{{row.beerlevel}}">{{ row.beer }}</td>
+                <td data-title="{{ COPY.labels.hdr_spirits }}" class="amt bg bg-{{row.spiritslevel}}">{{ row.spirits }}</td>
+                <td data-title="{{ COPY.labels.hdr_wine }}" class="amt bg bg-{{row.winelevel}}">{{ row.wine }}</td>
+                <td data-title="{{ COPY.labels.hdr_other }}" class="amt bg bg-{{row.otherlevel}}">{{ row.other }}</td>
+				<td data-title="{{ COPY.labels.hdr_total }}" class="amt total bg bg-{{row.totallevel}}">{{ row.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+		
+		
+		<h3 class="americas">Americas</h3>
+			
+        <table id="americas-table">
+            <thead>
+                <tr>
+                    <th class="country sort-default">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_country }}</div>
+                    </th>
+                    <th class="rank">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_rank }}</div>
+                    </th>
+                    <!-- <th class="income">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_region }}</div>
+                    </th> -->
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_beer }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_spirits }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_wine }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_other }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_total }}</div>
+                    </th>
+                </tr>
+            </thead>
+			
+            {% for row in COPY.data if row.region == 'Americas' %}
+            <tr class="country-{{ row.country|classify}} {{ loop.cycle('odd', 'even')}}">
+                <td data-title="{{ COPY.labels.hdr_country}}"  class="country">{{ row.country }}</td>
+                <!-- <td data-title="{{ COPY.labels.hdr_region }}" class="region">{{ row.region }}</td> -->
+                <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
+                <td data-title="{{ COPY.labels.hdr_beer }}" class="amt bg bg-{{row.beerlevel}}">{{ row.beer }}</td>
+                <td data-title="{{ COPY.labels.hdr_spirits }}" class="amt bg bg-{{row.spiritslevel}}">{{ row.spirits }}</td>
+                <td data-title="{{ COPY.labels.hdr_wine }}" class="amt bg bg-{{row.winelevel}}">{{ row.wine }}</td>
+                <td data-title="{{ COPY.labels.hdr_other }}" class="amt bg bg-{{row.otherlevel}}">{{ row.other }}</td>
+                <td data-title="{{ COPY.labels.hdr_total }}" class="amt total bg bg-{{row.totallevel}}">{{ row.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+		
+		
+		<h3 class="eastern-mediterranean">Eastern Mediterranean</h3>
+			
+        <table id="eastern-mediterranean-table">
+            <thead>
+                <tr>
+                    <th class="country sort-default">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_country }}</div>
+                    </th>
+                    <th class="rank">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_rank }}</div>
+                    </th>
+                    <!-- <th class="income">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_region }}</div>
+                    </th> -->
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_beer }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_spirits }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_wine }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_other }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_total }}</div>
+                    </th>
+                </tr>
+            </thead>
+			
+            {% for row in COPY.data if row.region == 'Eastern Mediterranean' %}
+            <tr class="country-{{ row.country|classify}} {{ loop.cycle('odd', 'even')}}">
+                <td data-title="{{ COPY.labels.hdr_country}}"  class="country">{{ row.country }}</td>
+                <!-- <td data-title="{{ COPY.labels.hdr_region }}" class="region">{{ row.region }}</td> -->
+                <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
+                <td data-title="{{ COPY.labels.hdr_beer }}" class="amt bg bg-{{row.beerlevel}}">{{ row.beer }}</td>
+                <td data-title="{{ COPY.labels.hdr_spirits }}" class="amt bg bg-{{row.spiritslevel}}">{{ row.spirits }}</td>
+                <td data-title="{{ COPY.labels.hdr_wine }}" class="amt bg bg-{{row.winelevel}}">{{ row.wine }}</td>
+                <td data-title="{{ COPY.labels.hdr_other }}" class="amt bg bg-{{row.otherlevel}}">{{ row.other }}</td>
+				<td data-title="{{ COPY.labels.hdr_total }}" class="amt total bg bg-{{row.totallevel}}">{{ row.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+		
+		
+		<h3 class="europe">Europe</h3>
+			
+        <table id="europe-table">
+            <thead>
+                <tr>
+                    <th class="country sort-default">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_country }}</div>
+                    </th>
+                    <th class="rank">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_rank }}</div>
+                    </th>
+                    <!-- <th class="income">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_region }}</div>
+                    </th> -->
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_beer }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_spirits }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_wine }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_other }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_total }}</div>
+                    </th>
+                </tr>
+            </thead>
+			
+            {% for row in COPY.data if row.region == 'Europe' %}
+            <tr class="country-{{ row.country|classify}} {{ loop.cycle('odd', 'even')}}">
+                <td data-title="{{ COPY.labels.hdr_country}}"  class="country">{{ row.country }}</td>
+                <!-- <td data-title="{{ COPY.labels.hdr_region }}" class="region">{{ row.region }}</td> -->
+                <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
+                <td data-title="{{ COPY.labels.hdr_beer }}" class="amt bg bg-{{row.beerlevel}}">{{ row.beer }}</td>
+                <td data-title="{{ COPY.labels.hdr_spirits }}" class="amt bg bg-{{row.spiritslevel}}">{{ row.spirits }}</td>
+                <td data-title="{{ COPY.labels.hdr_wine }}" class="amt bg bg-{{row.winelevel}}">{{ row.wine }}</td>
+                <td data-title="{{ COPY.labels.hdr_other }}" class="amt bg bg-{{row.otherlevel}}">{{ row.other }}</td>
+				<td data-title="{{ COPY.labels.hdr_total }}" class="amt total bg bg-{{row.totallevel}}">{{ row.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+		
+		<h3 class="south-east-asia">South-East Asia</h3>
+			
+        <table id="south-east-asia-table">
+           <thead>
+               <tr>
+                   <th class="country sort-default">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_country }}</div>
+                   </th>
+                   <th class="rank">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_rank }}</div>
+                   </th>
+                   <!-- <th class="income">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_region }}</div>
+                   </th> -->
+                   <th class="amt">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_beer }}</div>
+                   </th>
+                   <th class="amt">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_spirits }}</div>
+                   </th>
+                   <th class="amt">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_wine }}</div>
+                   </th>
+                   <th class="amt">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_other }}</div>
+                   </th>
+                   <th class="amt">
+                       <div class="sorter"><div class="icon"></div></div>
+                       <div class="header">{{ COPY.labels.hdr_total }}</div>
+                   </th>
+               </tr>
+           </thead>
+		
+            {% for row in COPY.data if row.region == 'South-East Asia' %}
+           <tr class="country-{{ row.country|classify}} {{ loop.cycle('odd', 'even')}}">
+               <td data-title="{{ COPY.labels.hdr_country}}"  class="country">{{ row.country }}</td>
+               <!-- <td data-title="{{ COPY.labels.hdr_region }}" class="region">{{ row.region }}</td> -->
+               <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
+               <td data-title="{{ COPY.labels.hdr_beer }}" class="amt bg bg-{{row.beerlevel}}">{{ row.beer }}</td>
+               <td data-title="{{ COPY.labels.hdr_spirits }}" class="amt bg bg-{{row.spiritslevel}}">{{ row.spirits }}</td>
+               <td data-title="{{ COPY.labels.hdr_wine }}" class="amt bg bg-{{row.winelevel}}">{{ row.wine }}</td>
+               <td data-title="{{ COPY.labels.hdr_other }}" class="amt bg bg-{{row.otherlevel}}">{{ row.other }}</td>
+			<td data-title="{{ COPY.labels.hdr_total }}" class="amt total bg bg-{{row.totallevel}}">{{ row.total }}</td>
+           </tr>
+           {% endfor %}
+
+        </table>
+		
+		<h3 class="western-pacific">Western Pacific</h3>
+			
+        <table id="western-pacific">
+            <thead>
+                <tr>
+                    <th class="country sort-default">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_country }}</div>
+                    </th>
+                    <th class="rank">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_rank }}</div>
+                    </th>
+                    <!-- <th class="income">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_region }}</div>
+                    </th> -->
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_beer }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_spirits }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_wine }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_other }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_total }}</div>
+                    </th>
+                </tr>
+            </thead>
+			
+            {% for row in COPY.data if row.region == 'Western Pacific' %}
+            <tr class="country-{{ row.country|classify}} {{ loop.cycle('odd', 'even')}}">
+                <td data-title="{{ COPY.labels.hdr_country}}"  class="country">{{ row.country }}</td>
+                <!-- <td data-title="{{ COPY.labels.hdr_region }}" class="region">{{ row.region }}</td> -->
+                <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
+                <td data-title="{{ COPY.labels.hdr_beer }}" class="amt bg bg-{{row.beerlevel}}">{{ row.beer }}</td>
+                <td data-title="{{ COPY.labels.hdr_spirits }}" class="amt bg bg-{{row.spiritslevel}}">{{ row.spirits }}</td>
+                <td data-title="{{ COPY.labels.hdr_wine }}" class="amt bg bg-{{row.winelevel}}">{{ row.wine }}</td>
+                <td data-title="{{ COPY.labels.hdr_other }}" class="amt bg bg-{{row.otherlevel}}">{{ row.other }}</td>
+ 			<td data-title="{{ COPY.labels.hdr_total }}" class="amt total bg bg-{{row.totallevel}}">{{ row.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+		
+    </div>
+	
+	<div class="graphic-mobile">
+			
+        <table id="country-table">
+            <thead>
+                <tr>
+                    <th class="country sort-default">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_country }}</div>
+                    </th>
+                    <th class="rank">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_rank }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_total }} (liters)</div>
+                    </th>
+                </tr>
+            </thead>
+			
+            {% for row in COPY.datamobile %}
+            <tr class="country-{{ row.country|classify}} {{ loop.cycle('odd', 'even')}}">
+                <td data-title="{{ COPY.labels.hdr_country}}"  class="country">{{ row.country }}</td>
+                <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
+				<td data-title="{{ COPY.labels.hdr_total }}" class="amt total bg bg-{{row.totallevel}}">{{ row.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+		
+	</div>
+
+   <div class="footer">
+	{% if COPY.labels.footnote %}<p>Notes: {{ COPY.labels.footnote|smarty }}</p>{% endif %}
+       {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+       {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+   </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/tablesort.js') }}
+    {{ JS.push('js/lib/tablesort.numeric.js') }}
+    {{ JS.push('js/lib/pym.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}

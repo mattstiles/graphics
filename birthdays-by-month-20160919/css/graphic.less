@@ -1,0 +1,79 @@
+@import "base";
+
+// Add custom styles here
+.avg-line  {
+    stroke: #000;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.highlights rect {
+    fill: #dfdfdf;
+}
+
+.highlight-label {
+    font-size: 11px;
+    font-style: italic;
+    fill: #666;
+    -webkit-font-smoothing: antialiased;
+
+    &.label-christmas,
+	&.label-thanksgiving,
+	&.label-julyfourth,
+	&.label-valetines,
+	&.label-average {
+        text-anchor: middle;
+    }
+	&.label-halloween {
+		text-anchor: end;
+	}
+}
+
+.label-average {
+	fill: #000;
+}
+
+.highlight-note {
+    display: none;
+    font-size: 11px;
+    color: #666;
+    padding: 10px 0 0;
+    -webkit-font-smoothing: antialiased;
+
+    b {
+        display: inline-block;
+        width: 24px;
+        height: 12px;
+        background: #dfdfdf;
+        margin-right: 5px;
+        margin-bottom: -1px;
+    }
+}
+
+.bars rect { 
+	fill: @teal3; 
+    stroke: @teal3;
+    stroke-width: 1px;
+}
+
+//mobile
+
+@media screen and (max-width: 500px) {
+	
+	.highlight-label {
+		display: none;	
+	}
+	.highlights rect {
+	  	display: none;	
+	}
+	.bars rect { 
+	    stroke-width: 0px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.bars rect { 
+	    stroke-width: 0px;
+}
+}

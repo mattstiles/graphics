@@ -1,0 +1,65 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labelstable.headline %}<h1>{{ COPY.labelstable.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labelstable.subhed %}<h2>{{ render(COPY.labelstable.subhed)|smarty }}</h2>{% endif %}
+
+    <div class="graphic">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labelstable.hdr_birthdate }}</div>
+                    </th>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labelstable.hdr_rank }}</div>
+                    </th>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labelstable.hdr_conception }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labelstable.hdr_value }}</div>
+                    </th>
+                </tr>
+            </thead>
+
+            {% for row in COPY.data %}
+            <tr class="day-{{ row.birthdate|classify }}">
+                <td data-title="{{ COPY.labelstable.hdr_birthdate }}">{{ row.birthdate }}</td>
+                <td data-title="{{ COPY.labelstable.hdr_rank }}">{{ row.rank|ordinal }}</td>
+                <td data-title="{{ COPY.labelstable.hdr_conception }}" >{{ row.conception_date }}</td>
+                <td data-title="{{ COPY.labelstable.hdr_value }}" class="amt scale-{{ row.value_rank }}">{{ row.value|comma }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+    {% if COPY.labelstable.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>* {{ COPY.labelstable.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labelstable.source %}<p>Data: {{ COPY.labelstable.source|smarty }}</p>{% endif %}
+        {% if COPY.labelstable.credit %}<p>Credit: {{ COPY.labelstable.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/tablesort.js') }}
+    {{ JS.push('js/lib/tablesort.numeric.js') }}
+    {{ JS.push('js/lib/pym.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}

@@ -1,0 +1,164 @@
+@import "base";
+
+// Base table styles
+table {
+    border-collapse: collapse;
+    padding: 0;
+    width: 100%;
+    font-size: 12px;
+    color: #666;
+
+    tr.shadedrow {
+        background-color: #f1f1f1;
+        color: #333;
+        font-weight: bold;
+    }
+
+    th {
+        border-bottom: 2px solid #eee;
+        vertical-align: bottom;
+        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+		font-size: 16px;
+        text-align: left;
+        padding: 0 4px 10px 4px;
+        padding-top: 0;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    td {
+        padding: 3px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+    }
+
+    th,
+    td {
+        &.amt {
+            text-align: center;
+			font-weight: bold;
+			width: 20%;
+        }
+    }
+	
+	.scale-1 { color: #333; background-color: #fff7f3; }
+    .scale-2 { color: #333; background-color: #fde0dd; }
+    .scale-3 { color: #333; background-color: #fcc5c0; }
+    .scale-4 { color: #fff; background-color: #fa9fb5; }
+    .scale-5 { color: #fff; background-color: #f768a1; }
+	.scale-6 { color: #fff; background-color: #dd3497; }
+	.scale-7 { color: #fff; background-color: #ae017e; }
+	.scale-8 { color: #fff; background-color: #7a0177; }
+	.scale-9 { color: #fff; background-color: #49006a; }
+}
+
+// Tablesorter styles
+table {
+    th {
+        &.sort-header {
+            cursor: pointer;
+
+            &::-moz-selection,
+            &::selection {
+                background: transparent;
+            }
+
+            .sorter {
+                border-top: 2px solid #404040;
+                visibility: hidden;
+
+                .icon {
+                    content: '';
+                    width: 1px;
+                    margin: 3px auto 7px auto;
+                    border-width: 0 4px 4px;
+                    border-style: solid;
+                    border-color: #404040 transparent;
+                }
+            }
+
+            &:hover .sorter {
+                visibility: visible;
+            }
+        }
+
+        &.sort-up .sorter,
+        &.sort-down .sorter,
+        &.sort-down:hover .sorter {
+            visibility: visible;
+            opacity: 0.4;
+        }
+
+        &.sort-up .sorter .icon {
+            border-bottom: none;
+            border-width: 4px 4px 0;
+        }
+    }
+}
+
+// Mobile styles
+@media screen and (max-width: 500px) {
+	table {
+	    border-collapse: collapse;
+	    padding: 0;
+	    width: 100%;
+	    font-size: 12px;
+	    color: #666;
+
+	    tr.shadedrow {
+	        background-color: #f1f1f1;
+	        color: #333;
+	        font-weight: bold;
+	    }
+
+	    th {
+	        border-bottom: 2px solid #eee;
+	        vertical-align: bottom;
+	        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	        font-weight: bold;
+	        text-transform: none;
+			font-size: 11px;
+	        text-align: left;
+	        padding: 0px 0px 10px 0px;
+	        padding-top: 0;
+	        line-height: 1.2;
+	        letter-spacing: 0.05em;
+	        -webkit-font-smoothing: antialiased;
+	    }
+
+	    td {
+	        padding: 1px;
+	        border-bottom: 1px solid #eee;
+	        vertical-align: top;
+			font-size: 10px;
+	    }
+
+	    th {
+	        &.amt {
+	            text-align: center;
+				width: 20%;
+	        }
+	    }
+	    td {
+	        &.amt {
+	            text-align: center;
+				font-weight: normal; 
+				width: 20%;
+	        }
+	    }
+	
+		.scale-1 { color: #333; background-color: #fff7f3; }
+	    .scale-2 { color: #333; background-color: #fde0dd; }
+	    .scale-3 { color: #333; background-color: #fcc5c0; }
+	    .scale-4 { color: #fff; background-color: #fa9fb5; }
+	    .scale-5 { color: #fff; background-color: #f768a1; }
+		.scale-6 { color: #fff; background-color: #dd3497; }
+		.scale-7 { color: #fff; background-color: #ae017e; }
+		.scale-8 { color: #fff; background-color: #7a0177; }
+		.scale-9 { color: #fff; background-color: #49006a; }
+	}
+	
+}

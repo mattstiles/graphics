@@ -1,0 +1,32 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    <!-- {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %} -->
+    <div id="graphic" class="graphic">
+		<button class="button" onclick ="randomMap()">Get random @mapmakerbot map!</button>
+		<p class="tweet" id="map"><img src="http://pbs.twimg.com/media/Ckr6hgkUgAIhfzv.jpg"></p>
+	</div>
+
+    <div class="footer">
+		{% if COPY.labels.footnote %}<p>Notes: {{ COPY.labels.footnote|smarty }}</p>{% endif %}
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+		
+    </div>
+	
+    <script type="text/javascript">
+	var $mapBox = document.getElementById('map');
+
+	function randomMap() {
+	  var randomID = Math.floor(Math.random() * data.length);
+	  var randMap = data[randomID];	  
+	  
+	  $mapBox.innerHTML = "<a href=" + "\"" + randMap.url + "\">"+ "<img src=" + "\"http://pbs.twimg.com/media/" + randMap.image + ".jpg\"></a><br><br>" + "\"" + randMap.tweet + "\"<br><strong><small>" + "<a href=" + "\"" + randMap.url + "\">" + " — Tweeted</a> on " + randMap.date + " at " + randMap.time + "</small></strong>."
+	}	
+        var data = {{ COPY.data.json() }};
+        var labels = {{ COPY.labels.json() }};
+		
+    </script>
+
+{% endblock content %}
