@@ -1,0 +1,82 @@
+@import "base";
+
+.states {
+	fill: none;
+	stroke: #fff;
+	stroke-linejoin: round;
+}
+
+path:hover {
+	fill-opacity: .7;
+}
+
+.counties {
+    stroke: #fff;
+    stroke-width: .2px;
+}
+
+.counties:hover {
+    fill: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: #e6e6e6;
+  color: #111;
+  border-radius: 2px;
+  min-width: 70px;
+  max-width: 70px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: #e6e6e6;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+div.tooltip {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #FFF;
+    border-radius: .25rem;
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+    position: absolute;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 500px) {
+    .counties {
+    stroke: #fff;
+    stroke-width: 0px;
+}
+
+.states {
+	fill: none;
+	stroke: #fff;
+	stroke-width: .4px;
+	stroke-linejoin: round;
+	}
+
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>production : d3-choropleth-test-20161013</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	
+	<link rel='stylesheet' id='illustratr-source-sans-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-pt-serif-css'  href='https://fonts.googleapis.com/css?family=PT+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-source-code-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Code+Pro' type='text/css' media='all' />
+	
+	
+    <style type="text/css">
+        /* Basic styles */
+        body {
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+            font: 14px/1.4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 20px;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+            margin: 0 0 11px 0;
+        }
+
+        a, a:link,
+        a:visited {
+            color: #4774CC;
+            text-decoration: none;
+        }
+        a:hover,
+        a:active {
+            color: #bccae5;
+        }
+
+        a.btn {
+			font-size: 15px;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+            line-height: 28px;
+            margin: 0;
+            float: left;
+            padding: 0 11px;
+            border-radius: 4px;
+            background-color: #f7f7f7;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+        }
+        a.btn:hover,
+        a.btn:active {
+            background-color: #fff;
+        }
+
+        .graphics-list li {
+            margin-top: 0;
+            margin-bottom: 6px;
+        }
+
+        /* Header */
+        .parent-header {
+            background-color: #ebebeb;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            height: 40px;
+            padding: 10px 5px 0 5px;
+            overflow: hidden;
+        }
+        .parent-header:after { clear: both; }
+
+        .parent-header .segment {
+            float: left;
+            padding-left: 5px;
+            padding-right: 5px;
+            white-space: nowrap;
+        }
+
+        .parent-header .right {
+            float: right;
+            margin-right: 15px;
+        }
+
+        .s3,
+        a.s3,
+        a.s3:visited {
+			font-size: 15px;
+            color: #ff9900;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+			
+        }
+        
+		
+		.localhost,
+        a.localhost,
+        a.localhost:visited {
+			font-size: 15px;
+            color: #17807E;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+			
+        }
+
+        .staging,
+        a.staging,
+        a.staging:visited {
+			font-size: 15px;
+            color: #E38D2C;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+        }
+
+        .production,
+        a.production,
+        a.production:visited {
+			font-size: 15px;
+            color: #c33826;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+		
+        }
+
+        .resize {
+            background-color: white;
+        }
+
+        /* Content */
+        .content {
+            margin: 60px 10px 10px 10px;
+        }
+
+        #preview-wrapper {
+            border: 1px dashed #ccc;
+            padding: 10px;
+			margin-bottom: 20px;
+        }
+
+        #preview {
+            width: 100%;
+        }
+
+        textarea {
+			font-size: 15px;
+			font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+            display: block;
+			padding: 10px;
+            margin-bottom: 20px;
+			border: 1px dashed #ccc;
+        }
+		
+		.dvlogo {
+			text-transform: uppercase;
+			font-family: "Source Sans Pro", sans-serif;
+			font-weight: 900;
+		}
+    </style>
+</head>
+<body>
+
+    <header class="parent-header">
+        <div class="segment">
+            <h1 class="dvlogo">The Daily Viz</h1>
+        </div>
+
+        <div class="segment">
+            <a id="resize-mobile" class="btn" href="#">Mobile (300px)</a>
+        </div>
+
+        <div class="segment">
+            <a id="resize-desktop" class="btn" href="#">Desktop (730px)</a>
+        </div>
+		
+        <div class="segment">
+            <a id="resize-blog" class="btn" href="#">Blog (840px)</a>
+        </div>
+
+        <div class="segment">
+            <a id="resize-fluid" class="btn" href="#">Fluid (100%)</a>
+        </div>
+
+        <div class="right">
+                
+				
+				<div class="segment">
+                    <a class="btn s3" href="https://console.aws.amazon.com/s3/home?region=us-west-2#&bucket=mattstiles.org&prefix=dailygraphics/graphics/d3-choropleth-test-20161013/">S3 Bucket &raquo;</a>
+                </div>
+                
+			
+			
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div id="preview-wrapper">
+            <div id='preview'>
+            </div>
+        </div>
+		
+		<h2><span class="production">Production embed for The Daily Viz:</span> </h2>
+		
+		<!-- textarea contents -->
+		    <textarea readonly="readonly" rows="2" cols="100">[pym src="http://mattstiles.org/dailygraphics/graphics/d3-choropleth-test-20161013/child.html"]</textarea>
+		<!-- end textarea contents -->
+
+    </div>
+
+    <script type="text/javascript" src="//mattstiles.org/pym.v1.min.js"></script>
+
+    <script type="text/javascript">
+        var resizeblogEl = document.querySelector('#resize-blog');
+        var resizeMobileEl = document.querySelector('#resize-mobile');
+        var resizeDesktopEl = document.querySelector('#resize-desktop');
+        var resizeFluidEl = document.querySelector('#resize-fluid');
+        var previewWrapperEl = document.querySelector('#preview-wrapper');
+
+        resizeblogEl.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            previewWrapperEl.style.width = '840px';
+            pymParent.sendWidth();
+
+            window.location.hash = 'blog';
+        });
+
+        resizeMobileEl.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            previewWrapperEl.style.width = '300px';
+            pymParent.sendWidth();
+
+            window.location.hash = 'mobile';
+        });
+
+        resizeDesktopEl.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            previewWrapperEl.style.width = '730px';
+            pymParent.sendWidth();
+
+            window.location.hash = 'desktop';
+        });
+
+        resizeFluidEl.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            previewWrapperEl.style.width = '100%';
+            pymParent.sendWidth();
+
+            window.location.hash = 'fluid';
+        });
+
+        if (window.location.hash == '#blog') {
+            previewWrapperEl.style.width = '840px';
+        } else if (window.location.hash == '#mobile') {
+            previewWrapperEl.style.width = '300px';
+        } else if (window.location.hash == '#desktop') {
+            previewWrapperEl.style.width = '730px';
+        } else if (window.location.hash == '#fluid') {
+            previewWrapperEl.style.width = '100%';
+        }
+
+        var pymParent = new pym.Parent('preview', 'child.html', {});
+    </script>
+</body>
+</html>
