@@ -84,8 +84,28 @@ var renderGraphic = function(config) {
         .attr('transform', 'translate(' + margins['left'] + ')');
 
     var color = d3.scale.threshold()
-    .domain([0.02, 0.04, 0.06, 0.08, 0.10])
-    .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
+    .domain([0.05, 0.1, 0.15, 0.25, 0.5])
+    .range(["#C5DFDF", "#8BC0BF", "#51A09E", "#17807E", "#11605E", "#0B403F"]);
+
+// Create legend
+    var legendElement = containerElement.select('.key');
+
+    _.each(color.domain(), function(key, i) {
+        var keyItem = legendElement.append('li')
+            .classed('key-item', true)
+
+        keyItem.append('b')
+            .style('background', color(key));
+
+        keyItem.append('label')
+            .text(key);
+
+        if (i === color.domain().length - 1) {
+            keyItem.append('label')
+                .attr('class', 'end-label')
+                .text('22%');
+        }
+    });
 
 var projection = d3.geo.albersUsa()
         .scale([chartWidth * 1.4])
@@ -96,20 +116,21 @@ var path = d3.geo.path()
 
 queue()
     .defer(d3.json, "js/us.json")
-    .defer(d3.tsv, "data/unemployment.tsv", function(d) {
-          return { 
-        id: d.id,
-        rate: +d.rate
-         };
-    })
+    .defer(d3.tsv, "data/americans.tsv")
     .await(ready);
 
-function ready(error, us, unemployment) {
+function ready(error, us, americans) {
   if (error) throw error;
 
   var rateById = {};
+  var placeName = {};
 
-  unemployment.forEach(function(d) { rateById[d.id] = +d.rate; });
+  americans.forEach(function(d) { 
+    
+    rateById[d.id] = +d.rate,
+    placeName[d.id] = d.place;
+
+    });
 
   chartElement.append("g")
       .attr("class", "counties")
@@ -126,7 +147,7 @@ function ready(error, us, unemployment) {
                 .attr('style', 'left:' + (mouse[0] + 10) +
                         'px; top:' + (mouse[1] - 10) + 'px')
                 .html(function() {
-                    return "<strong>FIPS: </strong>" + [d.id] + "<br><strong>Rate: </strong>" + Math.abs([rateById[d.id]] * 100).toLocaleString(2) + "%"});
+                    return "<strong>" + Math.abs([rateById[d.id]] * 100).toLocaleString(2) + "%</strong> of people in " + placeName[d.id] + ", cited 'American' ancestry."});
                 })
         .on('mouseout', function() {
             tooltip.classed('hidden', true);

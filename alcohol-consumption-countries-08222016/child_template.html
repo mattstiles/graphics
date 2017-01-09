@@ -51,7 +51,7 @@
 			
             {% for row in COPY.data if row.region == 'Africa' %}
             <tr class="country-{{ row.country|classify}} country-mobile {{ loop.cycle('odd', 'even')}}">
-                <td data-title="{{ COPY.labels.hdr_country}}"  class="country country-mobile">{{ row.country }}</td>
+                <td data-title="{{ COPY.labels.hdr_country}}" class="country country-mobile">{{ row.country }}</td>
                 <!-- <td data-title="{{ COPY.labels.hdr_region }}" class="region">{{ row.region }}</td> -->
                 <td data-title="{{ COPY.labels.hdr_rank }}" class="rank">{{ row.rank }}</td>
                 <td data-title="{{ COPY.labels.hdr_beer }}" class="amt bg bg-{{row.beerlevel}}">{{ row.beer }}</td>

@@ -1,0 +1,82 @@
+@import "base";
+
+.lines {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #ccc;
+}
+
+.value text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+}
+
+.avg-line  {
+    //stroke: #c33826;
+	stroke: #999;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: 1;
+}
+
+.ref-line  {
+    //stroke: #c33826;
+	stroke: #999;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+	opacity: 1;
+}
+
+.matthew_line text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+}
+
+.highlight-label {
+    font-size: 11px;
+    font-style: italic;
+    fill: #666;
+    -webkit-font-smoothing: antialiased;
+
+    &.label-christmas,
+	&.label-thanksgiving,
+	&.label-julyfourth,
+	&.label-valetines,
+	&.label-average {
+        text-anchor: middle;
+    }
+	&.label-halloween {
+		text-anchor: end;
+	}
+}
+
+.highlight-note {
+    display: none;
+    font-size: 11px;
+    color: #666;
+    padding: 10px 0 0;
+    -webkit-font-smoothing: antialiased;
+
+    b {
+        display: inline-block;
+        width: 24px;
+        height: 12px;
+        background: #dfdfdf;
+        margin-right: 5px;
+        margin-bottom: -1px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .value text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key {
+        display: none;
+    }
+}

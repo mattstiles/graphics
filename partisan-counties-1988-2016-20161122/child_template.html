@@ -1,0 +1,73 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headliner %}<h1>{{ COPY.labels.headliner|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhedr %}<h2>{{ render(COPY.labels.subhedr)|smarty }}</h2>{% endif %}
+
+<input type="text" id="tableSearch" onkeyup="filterTable()" placeholder="Filter for a county..">
+
+
+<div class="graphic">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th class="country country-mobile sort-default">
+                        <div class="sorter"><div class="icon sort-default"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_state }}</div>
+                    </th>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_county }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_avgr }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_totalr }}</div>
+                    </th>
+                    <th class="amt" style="width:15%">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_pctr }}</div>
+                    </th>
+                </tr>
+            </thead>
+
+            {% for row in COPY.rep %}
+            <tr class="state-{{ row.usps|classify }} ">
+                <td data-title="{{ COPY.labels.hdr_state }}">{{ row.state }}</td>
+                <td data-title="{{ COPY.labels.hdr_county }}">{{ row.county }} County</td>
+                <td data-title="{{ COPY.labels.hdr_avgr }}" class="amt">{{ row.avgrep|comma }}</td>
+                <td data-title="{{ COPY.labels.hdr_totalr }}" class="amt">{{ row.avgvotes|comma }}</td>
+                <td data-title="{{ COPY.labels.hdr_pctr }}" class="amt bg bg-{{row.levelrep}}">{{ row.rep_pct }}%</td>
+
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/tablesort.js') }}
+    {{ JS.push('js/lib/tablesort.numeric.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}

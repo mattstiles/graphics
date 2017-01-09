@@ -20,7 +20,7 @@
       evt = new CustomEvent(name);
     }
 
-    return evt;
+    return evt;;
   };
 
   var getInnerText = function(el) {

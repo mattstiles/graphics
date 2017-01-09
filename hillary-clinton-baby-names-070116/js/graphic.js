@@ -303,11 +303,13 @@ var renderLineChart = function(config) {
             });
 			
    // Render reference line
+
+   var clinton_election = d3.time.format('%m/%d/%y').parse('12/31/1992')
     
 	chartElement.append('line')
         .attr('class', 'hillary-line')
-	        .attr('x1', xScale([fmtYearFull = 1992]))
-	        .attr('x2', xScale([fmtYearFull = 1992]))
+	        .attr('x1', xScale([clinton_election]))
+	        .attr('x2', xScale([clinton_election]))
 	        .attr('y1', chartHeight)
 	        .attr('y2', 0)
 	

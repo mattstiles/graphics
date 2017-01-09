@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Daily Viz | Matt Stiles</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex" />
+    <link rel="shortcut icon" href="http://thedailyviz.com/favicon.ico" />
+
+	<link rel='stylesheet' id='illustratr-source-sans-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-pt-serif-css'  href='https://fonts.googleapis.com/css?family=PT+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='illustratr-source-code-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Code+Pro' type='text/css' media='all' />
+
+    <base target="_blank">
+
+    <!-- Configuration -->
+    <script type="text/javascript">
+        GOOGLE_ANALYTICS_ACCOUNT_ID = 'UA-30938757-1';
+        GOOGLE_ANALYTICS_PROJECT_SLUG = 'poverty-change-states-20160921';
+    </script>
+
+    <!-- CSS + LESS -->
+    
+    <link rel="stylesheet" type="text/css" href="css/graphic-header.css?1475110043" />
+</head>
+<body>
+    <!-- Analytics -->
+    
+    
+    <script type="text/javascript" src="js/graphic-header.js?1475110043"></script>
+
+    
+
+    <h1>The State of Poverty</h1>
+    <h2>New Hampshire had the lowest poverty rate (8.2%) in 2015, while Mississippi had the highest rate (22%). </h2>
+
+    <div id="state-grid-map" class="graphic">  
+    </div>
+
+    <div class="footer">
+		<p>Notes: Poverty as defined by the U.S. Census Bureau. Read more information <a href="www2.census.gov/programs-surveys/acs/tech_docs/subject
+_definitions/2014_ACSSubjectDefinitions.pdf">here</a>.</p>
+        <p>Data: U.S. Census Bureau, <a href="https://www.census.gov/content/dam/Census/library/publications/2016/demo/acsbr15-01.pdf">American Community Survey</a></p>
+        <p>Credit: Matt Stiles/<a href="http://www.thedailyviz.com/about">The Daily Viz</a></p>
+    </div>
+
+    <div id="map-template" style="display: none;">
+        <div class="key-wrap">
+            <h3>People in Poverty, 2015</h3>
+            <ul class="key"></ul>
+        </div>
+
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <svg viewBox="0 0 436 254" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <title>map</title>
+            <desc></desc>
+            <defs></defs>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <g class="map" sketch:type="MSLayerGroup" transform="translate(1.000000, 2.000000)" stroke-width="2" stroke="#FFFFFF" fill="#DDDDDD">
+                    <g class="states" sketch:type="MSShapeGroup">
+                        <path d="M35.5255888,0 L52.8460969,10 L52.8460969,30 L35.5255888,40 L18.2050808,30 L18.2050808,10 L35.5255888,0 Z" class="state-alaska"></path>
+                        <path d="M416.576766,0 L433.897275,10 L433.897275,30 L416.576766,40 L399.256258,30 L399.256258,10 L416.576766,0 Z" class="state-maine"></path>
+                        <path d="M364.615242,30 L381.93575,40 L381.93575,60 L364.615242,70 L347.294734,60 L347.294734,40 L364.615242,30 Z" class="state-vermont"></path>
+                        <path d="M399.256258,30 L416.576766,40 L416.576766,60 L399.256258,70 L381.93575,60 L381.93575,40 L399.256258,30 Z" class="state-new-hampshire"></path>
+                        <path d="M70.166605,60 L87.4871131,70 L87.4871131,90 L70.166605,100 L52.8460969,90 L52.8460969,70 L70.166605,60 Z" class="state-washington"></path>
+                        <path d="M104.807621,60 L122.128129,70 L122.128129,90 L104.807621,100 L87.4871131,90 L87.4871131,70 L104.807621,60 Z" class="state-montana"></path>
+                        <path d="M139.448637,60 L156.769145,70 L156.769145,90 L139.448637,100 L122.128129,90 L122.128129,70 L139.448637,60 Z" class="state-north-dakota"></path>
+                        <path d="M174.089653,60 L191.410162,70 L191.410162,90 L174.089653,100 L156.769145,90 L156.769145,70 L174.089653,60 Z" class="state-minnesota"></path>
+                        <path d="M208.73067,60 L226.051178,70 L226.051178,90 L208.73067,100 L191.410162,90 L191.410162,70 L208.73067,60 Z" class="state-wisconsin"></path>
+                        <path d="M278.012702,60 L295.33321,70 L295.33321,90 L278.012702,100 L260.692194,90 L260.692194,70 L278.012702,60 Z" class="state-michigan"></path>
+                        <path d="M347.294734,60 L364.615242,70 L364.615242,90 L347.294734,100 L329.974226,90 L329.974226,70 L347.294734,60 Z" class="state-new-york"></path>
+                        <path d="M381.93575,60 L399.256258,70 L399.256258,90 L381.93575,100 L364.615242,90 L364.615242,70 L381.93575,60 Z" class="state-massachusetts"></path>
+                        <path d="M416.576766,60 L433.897275,70 L433.897275,90 L416.576766,100 L399.256258,90 L399.256258,70 L416.576766,60 Z" class="state-rhode-island"></path>
+                        <path d="M87.4871131,90 L104.807621,100 L104.807621,120 L87.4871131,130 L70.166605,120 L70.166605,100 L87.4871131,90 Z" class="state-idaho"></path>
+                        <path d="M122.128129,90 L139.448637,100 L139.448637,120 L122.128129,130 L104.807621,120 L104.807621,100 L122.128129,90 Z" class="state-wyoming"></path>
+                        <path d="M156.769145,90 L174.089653,100 L174.089653,120 L156.769145,130 L139.448637,120 L139.448637,100 L156.769145,90 Z" class="state-south-dakota"></path>
+                        <path d="M191.410162,90 L208.73067,100 L208.73067,120 L191.410162,130 L174.089653,120 L174.089653,100 L191.410162,90 Z" class="state-iowa"></path>
+                        <path d="M226.051178,90 L243.371686,100 L243.371686,120 L226.051178,130 L208.73067,120 L208.73067,100 L226.051178,90 Z" class="state-illinois"></path>
+                        <path d="M260.692194,90 L278.012702,100 L278.012702,120 L260.692194,130 L243.371686,120 L243.371686,100 L260.692194,90 Z" class="state-indiana"></path>
+                        <path d="M295.33321,90 L312.653718,100 L312.653718,120 L295.33321,130 L278.012702,120 L278.012702,100 L295.33321,90 Z" class="state-ohio"></path>
+                        <path d="M329.974226,90 L347.294734,100 L347.294734,120 L329.974226,130 L312.653718,120 L312.653718,100 L329.974226,90 Z" class="state-pennsylvania"></path>
+                        <path d="M364.615242,90 L381.93575,100 L381.93575,120 L364.615242,130 L347.294734,120 L347.294734,100 L364.615242,90 Z" class="state-new-jersey"></path>
+                        <path d="M399.256258,90 L416.576766,100 L416.576766,120 L399.256258,130 L381.93575,120 L381.93575,100 L399.256258,90 Z" class="state-connecticut"></path>
+                        <path d="M70.166605,120 L87.4871131,130 L87.4871131,150 L70.166605,160 L52.8460969,150 L52.8460969,130 L70.166605,120 Z" class="state-oregon"></path>
+                        <path d="M104.807621,120 L122.128129,130 L122.128129,150 L104.807621,160 L87.4871131,150 L87.4871131,130 L104.807621,120 Z" class="state-nevada"></path>
+                        <path d="M139.448637,120 L156.769145,130 L156.769145,150 L139.448637,160 L122.128129,150 L122.128129,130 L139.448637,120 Z" class="state-colorado"></path>
+                        <path d="M174.089653,120 L191.410162,130 L191.410162,150 L174.089653,160 L156.769145,150 L156.769145,130 L174.089653,120 Z" class="state-nebraska"></path>
+                        <path d="M208.73067,120 L226.051178,130 L226.051178,150 L208.73067,160 L191.410162,150 L191.410162,130 L208.73067,120 Z" class="state-missouri"></path>
+                        <path d="M243.371686,120 L260.692194,130 L260.692194,150 L243.371686,160 L226.051178,150 L226.051178,130 L243.371686,120 Z" class="state-kentucky"></path>
+                        <path d="M278.012702,120 L295.33321,130 L295.33321,150 L278.012702,160 L260.692194,150 L260.692194,130 L278.012702,120 Z" class="state-west-virginia"></path>
+                        <path d="M312.653718,120 L329.974226,130 L329.974226,150 L312.653718,160 L295.33321,150 L295.33321,130 L312.653718,120 Z" class="state-virginia"></path>
+                        <path d="M347.294734,120 L364.615242,130 L364.615242,150 L347.294734,160 L329.974226,150 L329.974226,130 L347.294734,120 Z" class="state-maryland"></path>
+                        <path d="M381.93575,120 L399.256258,130 L399.256258,150 L381.93575,160 L364.615242,150 L364.615242,130 L381.93575,120 Z" class="state-delaware"></path>
+                        <path d="M87.4871131,150 L104.807621,160 L104.807621,180 L87.4871131,190 L70.166605,180 L70.166605,160 L87.4871131,150 Z" class="state-california"></path>
+                        <path d="M122.128129,150 L139.448637,160 L139.448637,180 L122.128129,190 L104.807621,180 L104.807621,160 L122.128129,150 Z" class="state-utah"></path>
+                        <path d="M156.769145,150 L174.089653,160 L174.089653,180 L156.769145,190 L139.448637,180 L139.448637,160 L156.769145,150 Z" class="state-new-mexico"></path>
+                        <path d="M191.410162,150 L208.73067,160 L208.73067,180 L191.410162,190 L174.089653,180 L174.089653,160 L191.410162,150 Z" class="state-kansas"></path>
+                        <path d="M226.051178,150 L243.371686,160 L243.371686,180 L226.051178,190 L208.73067,180 L208.73067,160 L226.051178,150 Z" class="state-arkansas"></path>
+                        <path d="M260.692194,150 L278.012702,160 L278.012702,180 L260.692194,190 L243.371686,180 L243.371686,160 L260.692194,150 Z" class="state-tennessee"></path>
+                        <path d="M295.33321,150 L312.653718,160 L312.653718,180 L295.33321,190 L278.012702,180 L278.012702,160 L295.33321,150 Z" class="state-north-carolina"></path>
+                        <path d="M329.974226,150 L347.294734,160 L347.294734,180 L329.974226,190 L312.653718,180 L312.653718,160 L329.974226,150 Z" class="state-south-carolina"></path>
+                        <path d="M364.615242,150 L381.93575,160 L381.93575,180 L364.615242,190 L347.294734,180 L347.294734,160 L364.615242,150 Z" class="state-district-of-columbia"></path>
+                        <path d="M139.448637,180 L156.769145,190 L156.769145,210 L139.448637,220 L122.128129,210 L122.128129,190 L139.448637,180 Z" class="state-arizona"></path>
+                        <path d="M174.089653,180 L191.410162,190 L191.410162,210 L174.089653,220 L156.769145,210 L156.769145,190 L174.089653,180 Z" class="state-oklahoma"></path>
+                        <path d="M208.73067,180 L226.051178,190 L226.051178,210 L208.73067,220 L191.410162,210 L191.410162,190 L208.73067,180 Z" class="state-louisiana"></path>
+                        <path d="M243.371686,180 L260.692194,190 L260.692194,210 L243.371686,220 L226.051178,210 L226.051178,190 L243.371686,180 Z" class="state-mississippi"></path>
+                        <path d="M278.012702,180 L295.33321,190 L295.33321,210 L278.012702,220 L260.692194,210 L260.692194,190 L278.012702,180 Z" class="state-alabama"></path>
+                        <path d="M312.653718,180 L329.974226,190 L329.974226,210 L312.653718,220 L295.33321,210 L295.33321,190 L312.653718,180 Z" class="state-georgia"></path>
+                        <path d="M18.2050808,210 L35.5255888,220 L35.5255888,240 L18.2050808,250 L0.884572681,240 L0.884572681,220 L18.2050808,210 Z" class="state-hawaii"></path>
+                        <path d="M191.410162,210 L208.73067,220 L208.73067,240 L191.410162,250 L174.089653,240 L174.089653,220 L191.410162,210 Z" class="state-texas"></path>
+                        <path d="M295.33321,210 L312.653718,220 L312.653718,240 L295.33321,250 L278.012702,240 L278.012702,220 L295.33321,210 Z" class="state-florida"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <script type="text/javascript">
+        var DATA = [{"state_name": "New Hampshire", "category": " 8.2%", "num14": "117983.0", "pct14": "9.2", "num15": "106046.0", "pct15": "8.2", "numchg": "-11937.0", "pctchg": "-0.9"}, {"state_name": "Maryland", "category": " 8.2%", "num14": "589818.0", "pct14": "10.1", "num15": "570776.0", "pct15": "9.7", "numchg": "-19042.0", "pctchg": "-0.4"}, {"state_name": "Minnesota", "category": " 8.2%", "num14": "611354.0", "pct14": "11.5", "num15": "546431.0", "pct15": "10.2", "numchg": "-64923.0", "pctchg": "-1.3"}, {"state_name": "Vermont", "category": " 8.2%", "num14": "73149.0", "pct14": "12.2", "num15": "61314.0", "pct15": "10.2", "numchg": "-11835.0", "pctchg": "-1.9"}, {"state_name": "Alaska", "category": " 8.2%", "num14": "80627.0", "pct14": "11.2", "num15": "74532.0", "pct15": "10.3", "numchg": "-6095.0", "pctchg": "-0.9"}, {"state_name": "Connecticut", "category": " 8.2%", "num14": "374772.0", "pct14": "10.8", "num15": "366909.0", "pct15": "10.5", "numchg": "-7863.0", "pctchg": "-0.2"}, {"state_name": "Hawaii", "category": " 8.2%", "num14": "156729.0", "pct14": "11.4", "num15": "147984.0", "pct15": "10.6", "numchg": "-8745.0", "pctchg": "-0.7"}, {"state_name": "New Jersey", "category": " 8.2%", "num14": "972903.0", "pct14": "11.1", "num15": "946114.0", "pct15": "10.8", "numchg": "-26789.0", "pctchg": "-0.3"}, {"state_name": "North Dakota", "category": "11%", "num14": "82264.0", "pct14": "11.5", "num15": "80170.0", "pct15": "11.0", "numchg": "-2094.0", "pctchg": "-0.6"}, {"state_name": "Wyoming", "category": "11%", "num14": "63774.0", "pct14": "11.2", "num15": "63425.0", "pct15": "11.1", "numchg": "-349.0", "pctchg": "-0.1"}, {"state_name": "Virginia", "category": "11%", "num14": "953395.0", "pct14": "11.8", "num15": "909346.0", "pct15": "11.2", "numchg": "-44049.0", "pctchg": "-0.6"}, {"state_name": "Utah", "category": "11%", "num14": "339900.0", "pct14": "11.7", "num15": "331854.0", "pct15": "11.3", "numchg": "-8046.0", "pctchg": "-0.5"}, {"state_name": "Colorado", "category": "11%", "num14": "630786.0", "pct14": "12.0", "num15": "613549.0", "pct15": "11.5", "numchg": "-17237.0", "pctchg": "-0.6"}, {"state_name": "Massachusetts", "category": "11%", "num14": "757235.0", "pct14": "11.6", "num15": "752071.0", "pct15": "11.5", "numchg": "-5164.0", "pctchg": "-0.2"}, {"state_name": "Wisconsin", "category": "11%", "num14": "738270.0", "pct14": "13.2", "num15": "677964.0", "pct15": "12.1", "numchg": "-60306.0", "pctchg": "-1.1"}, {"state_name": "Iowa", "category": "11%", "num14": "367816.0", "pct14": "12.2", "num15": "367414.0", "pct15": "12.2", "numchg": "-402.0", "pctchg": "-0.1"}, {"state_name": "Washington", "category": "11%", "num14": "913619.0", "pct14": "13.2", "num15": "857801.0", "pct15": "12.2", "numchg": "-55818.0", "pctchg": "-1.0"}, {"state_name": "Delaware", "category": "11%", "num14": "113508.0", "pct14": "12.5", "num15": "114360.0", "pct15": "12.4", "numchg": "852.0", "pctchg": "-0.1"}, {"state_name": "Nebraska", "category": "11%", "num14": "227310.0", "pct14": "12.4", "num15": "231321.0", "pct15": "12.6", "numchg": "4011.0", "pctchg": "0.1"}, {"state_name": "Kansas", "category": "13%", "num14": "382712.0", "pct14": "13.6", "num15": "368879.0", "pct15": "13.0", "numchg": "-13833.0", "pctchg": "-0.5"}, {"state_name": "Pennsylvania", "category": "13%", "num14": "1682212.0", "pct14": "13.6", "num15": "1629995.0", "pct15": "13.2", "numchg": "-52217.0", "pctchg": "-0.4"}, {"state_name": "Maine", "category": "13%", "num14": "182791.0", "pct14": "14.1", "num15": "172620.0", "pct15": "13.4", "numchg": "-10171.0", "pctchg": "-0.8"}, {"state_name": "Illinois", "category": "13%", "num14": "1804535.0", "pct14": "14.4", "num15": "1703258.0", "pct15": "13.6", "numchg": "-101277.0", "pctchg": "-0.8"}, {"state_name": "South Dakota", "category": "13%", "num14": "116843.0", "pct14": "14.2", "num15": "114071.0", "pct15": "13.7", "numchg": "-2772.0", "pctchg": "-0.4"}, {"state_name": "Rhode Island", "category": "13%", "num14": "145596.0", "pct14": "14.3", "num15": "141035.0", "pct15": "13.9", "numchg": "-4561.0", "pctchg": "-0.5"}, {"state_name": "Indiana", "category": "13%", "num14": "974218.0", "pct14": "15.2", "num15": "933181.0", "pct15": "14.5", "numchg": "-41037.0", "pctchg": "-0.7"}, {"state_name": "Montana", "category": "13%", "num14": "153954.0", "pct14": "15.4", "num15": "147287.0", "pct15": "14.6", "numchg": "-6667.0", "pctchg": "-0.8"}, {"state_name": "Nevada", "category": "13%", "num14": "426730.0", "pct14": "15.2", "num15": "418243.0", "pct15": "14.7", "numchg": "-8487.0", "pctchg": "-0.6"}, {"state_name": "Missouri", "category": "13%", "num14": "908628.0", "pct14": "15.5", "num15": "875495.0", "pct15": "14.8", "numchg": "-33133.0", "pctchg": "-0.6"}, {"state_name": "Ohio", "category": "13%", "num14": "1785780.0", "pct14": "15.8", "num15": "1674415.0", "pct15": "14.8", "numchg": "-111365.0", "pctchg": "-1.0"}, {"state_name": "Idaho", "category": "13%", "num14": "237981.0", "pct14": "14.8", "num15": "245551.0", "pct15": "15.1", "numchg": "7570.0", "pctchg": "0.3"}, {"state_name": "California", "category": "13%", "num14": "6259098.0", "pct14": "16.4", "num15": "5891678.0", "pct15": "15.3", "numchg": "-367420.0", "pctchg": "-1.1"}, {"state_name": "New York", "category": "13%", "num14": "3062938.0", "pct14": "15.9", "num15": "2970032.0", "pct15": "15.4", "numchg": "-92906.0", "pctchg": "-0.5"}, {"state_name": "Oregon", "category": "13%", "num14": "644450.0", "pct14": "16.6", "num15": "607029.0", "pct15": "15.4", "numchg": "-37421.0", "pctchg": "-1.2"}, {"state_name": "Florida", "category": "13%", "num14": "3211615.0", "pct14": "16.5", "num15": "3116886.0", "pct15": "15.7", "numchg": "-94729.0", "pctchg": "-0.8"}, {"state_name": "Michigan", "category": "13%", "num14": "1568844.0", "pct14": "16.2", "num15": "1529645.0", "pct15": "15.8", "numchg": "-39199.0", "pctchg": "-0.4"}, {"state_name": "Texas", "category": "13%", "num14": "4523708.0", "pct14": "17.2", "num15": "4255517.0", "pct15": "15.9", "numchg": "-268191.0", "pctchg": "-1.3"}, {"state_name": "Oklahoma", "category": "16%", "num14": "623840.0", "pct14": "16.6", "num15": "610828.0", "pct15": "16.1", "numchg": "-13012.0", "pctchg": "-0.5"}, {"state_name": "North Carolina", "category": "16%", "num14": "1668686.0", "pct14": "17.2", "num15": "1607835.0", "pct15": "16.4", "numchg": "-60851.0", "pctchg": "-0.8"}, {"state_name": "South Carolina", "category": "16%", "num14": "843860.0", "pct14": "18.0", "num15": "790715.0", "pct15": "16.6", "numchg": "-53145.0", "pctchg": "-1.3"}, {"state_name": "Tennessee", "category": "16%", "num14": "1171307.0", "pct14": "18.3", "num15": "1077900.0", "pct15": "16.7", "numchg": "-93407.0", "pctchg": "-1.6"}, {"state_name": "Georgia", "category": "16%", "num14": "1797969.0", "pct14": "18.3", "num15": "1694988.0", "pct15": "17.0", "numchg": "-102981.0", "pctchg": "-1.3"}, {"state_name": "District of Columbia", "category": "16%", "num14": "110666.0", "pct14": "17.7", "num15": "110500.0", "pct15": "17.3", "numchg": "-166.0", "pctchg": "-0.4"}, {"state_name": "Arizona", "category": "16%", "num14": "1199061.0", "pct14": "18.2", "num15": "1159043.0", "pct15": "17.4", "numchg": "-40018.0", "pctchg": "-0.9"}, {"state_name": "West Virginia", "category": "16%", "num14": "327764.0", "pct14": "18.3", "num15": "321583.0", "pct15": "17.9", "numchg": "-6181.0", "pctchg": "-0.3"}, {"state_name": "Alabama", "category": "18%", "num14": "910175.0", "pct14": "19.3", "num15": "876016.0", "pct15": "18.5", "numchg": "-34159.0", "pctchg": "-0.8"}, {"state_name": "Kentucky", "category": "18%", "num14": "817542.0", "pct14": "19.1", "num15": "794055.0", "pct15": "18.5", "numchg": "-23487.0", "pctchg": "-0.6"}, {"state_name": "Arkansas", "category": "18%", "num14": "543882.0", "pct14": "18.9", "num15": "550508.0", "pct15": "19.1", "numchg": "6626.0", "pctchg": "0.2"}, {"state_name": "Louisiana", "category": "18%", "num14": "896524.0", "pct14": "19.8", "num15": "889946.0", "pct15": "19.6", "numchg": "-6578.0", "pctchg": "-0.2"}, {"state_name": "New Mexico", "category": "18%", "num14": "436153.0", "pct14": "21.3", "num15": "417834.0", "pct15": "20.4", "numchg": "-18319.0", "pctchg": "-0.9"}, {"state_name": "Mississippi", "category": "18%", "num14": "623113.0", "pct14": "21.5", "num15": "637128.0", "pct15": "22.0", "numchg": "14015.0", "pctchg": "0.5"}];
+        var STATES = [{"name": "Alabama", "usps": "AL", "ap": "Ala."}, {"name": "Alaska", "usps": "AK", "ap": "Alaska"}, {"name": "Arizona", "usps": "AZ", "ap": "Ariz."}, {"name": "Arkansas", "usps": "AR", "ap": "Ark."}, {"name": "California", "usps": "CA", "ap": "Calif."}, {"name": "Colorado", "usps": "CO", "ap": "Colo."}, {"name": "Connecticut", "usps": "CT", "ap": "Conn."}, {"name": "Delaware", "usps": "DE", "ap": "Del."}, {"name": "District of Columbia", "usps": "DC", "ap": "D.C."}, {"name": "Florida", "usps": "FL", "ap": "Fla."}, {"name": "Georgia", "usps": "GA", "ap": "Ga."}, {"name": "Hawaii", "usps": "HI", "ap": "Hawaii"}, {"name": "Idaho", "usps": "ID", "ap": "Idaho"}, {"name": "Illinois", "usps": "IL", "ap": "Ill."}, {"name": "Indiana", "usps": "IN", "ap": "Ind."}, {"name": "Iowa", "usps": "IA", "ap": "Iowa"}, {"name": "Kansas", "usps": "KS", "ap": "Kan."}, {"name": "Kentucky", "usps": "KY", "ap": "Ky."}, {"name": "Louisiana", "usps": "LA", "ap": "La."}, {"name": "Maine", "usps": "ME", "ap": "Maine"}, {"name": "Maryland", "usps": "MD", "ap": "Md."}, {"name": "Massachusetts", "usps": "MA", "ap": "Mass."}, {"name": "Michigan", "usps": "MI", "ap": "Mich."}, {"name": "Minnesota", "usps": "MN", "ap": "Minn."}, {"name": "Mississippi", "usps": "MS", "ap": "Miss."}, {"name": "Missouri", "usps": "MO", "ap": "Mo."}, {"name": "Montana", "usps": "MT", "ap": "Mont."}, {"name": "Nebraska", "usps": "NE", "ap": "Neb."}, {"name": "Nevada", "usps": "NV", "ap": "Nev."}, {"name": "New Hampshire", "usps": "NH", "ap": "N.H."}, {"name": "New Jersey", "usps": "NJ", "ap": "N.J."}, {"name": "New Mexico", "usps": "NM", "ap": "N.M."}, {"name": "New York", "usps": "NY", "ap": "N.Y."}, {"name": "North Carolina", "usps": "NC", "ap": "N.C."}, {"name": "North Dakota", "usps": "ND", "ap": "N.D."}, {"name": "Ohio", "usps": "OH", "ap": "Ohio"}, {"name": "Oklahoma", "usps": "OK", "ap": "Okla."}, {"name": "Oregon", "usps": "OR", "ap": "Ore."}, {"name": "Pennsylvania", "usps": "PA", "ap": "Pa."}, {"name": "Rhode Island", "usps": "RI", "ap": "R.I."}, {"name": "South Carolina", "usps": "SC", "ap": "S.C."}, {"name": "South Dakota", "usps": "SD", "ap": "S.D."}, {"name": "Tennessee", "usps": "TN", "ap": "Tenn."}, {"name": "Texas", "usps": "TX", "ap": "Texas"}, {"name": "Utah", "usps": "UT", "ap": "Utah"}, {"name": "Vermont", "usps": "VT", "ap": "Vt."}, {"name": "Virginia", "usps": "VA", "ap": "Va."}, {"name": "Washington", "usps": "WA", "ap": "Wash."}, {"name": "West Virginia", "usps": "WV", "ap": "W.Va."}, {"name": "Wisconsin", "usps": "WI", "ap": "Wis."}, {"name": "Wyoming", "usps": "WY", "ap": "Wyo."}];
+    </script>
+
+
+    <script type="text/javascript" src="//pym.nprapps.org/pym.v1.min.js"></script>
+    
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="js/graphic-footer.js?1475110043"></script>
+    
+</body>
+</html>
