@@ -80,14 +80,14 @@ var renderGraphic = function(config) {
         .attr('transform', 'translate(' + margins['left'] + ')');
 
     // 2015 population
-    // var color = d3.scale.threshold()
-    // .domain([8000, 80000, 150000, 250000, 400000, 700000])
-    // .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
+    var color = d3.scale.threshold()
+    .domain([8000, 80000, 150000, 250000, 400000, 700000])
+    .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
 
     // 2015 foreigner population
-    var color = d3.scale.threshold()
-    .domain([100, 1000, 2500, 5000, 10000, 52500])
-    .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
+    // var color = d3.scale.threshold()
+    // .domain([100, 1000, 2500, 5000, 10000, 52500])
+    // .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
 
 // Create legend
     var legendElement = containerElement.select('.key');
@@ -111,7 +111,7 @@ var renderGraphic = function(config) {
 
 var projection = d3.geo.mercator()
         .center([128, 35.9])
-        .scale([chartWidth * 4.9])
+        .scale([chartWidth * 5.2])
         .translate([chartWidth / 2, chartHeight / 2]);
 
 var path = d3.geo.path()
@@ -122,10 +122,10 @@ queue()
     .defer(d3.json, "data/2013/json/skorea_provinces_topo_simple.json")
     
     // 2015 foreigner population
-    .defer(d3.tsv, "data/foreigners.txt")
+    // .defer(d3.tsv, "data/foreigners.txt")
     
     // 2015 population
-    //.defer(d3.tsv, "data/koreans.txt")
+    .defer(d3.tsv, "data/koreans.txt")
     .await(ready);
 
 function ready(error, korea, provinces, koreans) {
@@ -150,7 +150,7 @@ function ready(error, korea, provinces, koreans) {
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<strong>" + placeName[d.properties.id] + "</strong><br><strong>2015 Population: </strong>" + [popById[d.properties.id]].toLocaleString(0);
+        return "<strong>Place: </strong>" + placeName[d.properties.id] + "<br><strong>2015 Population: </strong>" + [popById[d.properties.id]].toLocaleString(0);
       })
 
     chartElement.call(tooltip)
@@ -175,18 +175,23 @@ function ready(error, korea, provinces, koreans) {
     .selectAll(".provinces")
       .data(topojson.feature(provinces, provinces.objects.skorea_provinces_geo).features)
       .enter().append("path")
-    .attr("d", path);
+    .attr("d", path)
+    .attr('class', function(d, i) {
+            return 'provinces-' + classify(d.properties.name_eng);
+        });
 
-    
 // province labels
 
-    // chartElement.selectAll("text")
-    // .attr("class", "province-labels")
-    //   .data(topojson.feature(provinces, provinces.objects.skorea_provinces_geo).features)
-    // .enter().append("text")
-    //   .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
-    //   .attr("dy", ".35em")
-    //   .text(function(d) { return d.properties.name_eng; });
+    chartElement.selectAll("text")
+    .attr("class", "province-labels")
+      .data(topojson.feature(provinces, provinces.objects.skorea_provinces_geo).features)
+    .enter().append("text")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", "1")
+      .text(function(d) { return d.properties.name_eng; })
+      .attr('class', function(d, i) {
+                return 'province-labels ' + classify(d.properties.name_eng);
+            });
 
 
 

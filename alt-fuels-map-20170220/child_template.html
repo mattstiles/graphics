@@ -1,0 +1,75 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+
+    <div id="graphic" class="graphic">
+        <div class="bottom-wrapper">
+            <div class="map-wrapper maps-fuels map-wide">
+                <p class="map-title">Counties with Alternative Fuel Stations</p>
+                <p class="small-note counties-all"><strong>2,135 (of 3,142) have public stations</strong></p>
+                    <img class="img-nolabel" src="assets/m-alt-fuels-counties-w-stations.png" alt="Map of U.S."/>
+                    <img class="img-label" src="assets/alt-fuels-counties-w-stations.png" alt="Map of U.S."/>
+            </div>
+
+            <div class="map-wrapper maps-fuels map-wide">
+                <p class="map-title">Counties with Electric Stations</p>
+                 <p class="small-note counties-electric"><strong>1,290 (of 3,142) have public stations</strong></p>
+                    <img class="img-nolabel" src="assets/m-alt-fuels-counties-w-electric.png" alt="Map of U.S."/>
+                    <img class="img-label" src="assets/alt-fuels-counties-w-electric.png" alt="Map of U.S."/>
+            </div>
+
+            <div class="map-wrapper maps-fuels">
+                <p class="map-title">Biodiesel</p>
+                <p class="small-note biodiesel"><strong>209 public stations</strong></p>
+                    <img src="assets/m-alt-fuels-biodiesel.png" alt="Map of U.S."/>
+            </div>
+            <div class="map-wrapper maps-fuels map-easier">
+                <p class="map-title">Electric</p>
+                <p class="small-note electric"><strong>15,527 public stations</strong></p>
+                    <img src="assets/m-alt-fuels-electric.png" alt="Map of U.S."/>
+            </div>
+            <div class="map-wrapper maps-fuels map-easier">
+                <p class="map-title">Ethanol</p>
+                <p class="small-note ethanol"><strong>2,832 public stations</strong></p>
+                    <img src="assets/m-alt-fuels-ethanol.png" alt="Map of U.S."/>
+            </div>
+            <div class="map-wrapper maps-fuels map-easier">
+                <p class="map-title">Hydrogen</p>
+                <p class="small-note hydrogen"><strong>33 public stations</strong></p>
+                <img src="assets/m-alt-fuels-hydrogen.png" alt="Map of U.S."/>
+            </div>
+            <div class="map-wrapper maps-fuels map-easier">
+                <p class="map-title">Liquified Natural Gas</p>
+                <p class="small-note lng"><strong>76 public stations</strong></p>
+                <img src="assets/m-alt-fuels-liquified-natural-gas.png" alt="Map of U.S."/>
+            </div>
+            <div class="map-wrapper maps-fuels map-same">
+                <p class="map-title">Compressed Natural Gas</p>
+                <p class="small-note cng"><strong>947 public stations</strong></p>
+                    <img src="assets/m-alt-fuels-compressed-natural-gas.png" alt="Map of U.S."/>
+            </div>
+            <div class="map-wrapper maps-fuels map-easier">
+                <p class="map-title">Propane</p>
+                <p class="small-note propane"><strong>3,289 public stations</strong></p>
+                
+                <img src="assets/m-alt-fuels-propane.png" alt="Map of U.S."/>
+            </div>
+        </div>
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}

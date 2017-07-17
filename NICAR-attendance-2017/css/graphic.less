@@ -1,0 +1,47 @@
+@import "base";
+
+.lines {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #ccc;
+}
+
+.dots circle {
+    fill: @teal3;
+    stroke: #fff;
+    stroke-width: 1px;
+ }
+
+.value text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.chart-label {
+    fill: #999;
+    font-style: italic;
+    font-size: 11px;
+    text-anchor: end;
+}
+
+.key {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .value text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key {
+        display: none;
+    }
+}

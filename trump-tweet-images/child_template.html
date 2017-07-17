@@ -1,0 +1,124 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+
+<!-- Page Content -->
+    <div class="container">
+
+    	<div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Thumbnail Gallery</h1>
+            </div>
+
+		{% for row in COPY.data %}
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="{{ row.url }}">
+                    <img class="img-responsive" src="{{ row.image }}" alt="">
+                </a>
+                <p>{{ row.text }}</p>
+            </div>
+        {% endfor %}
+		</div>
+
+<!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Thumbnail Gallery</h1>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+        </div>
+
+	    {% if COPY.labels.footnote %}
+	    <div class="footnotes">
+	        <h4>Notes</h4>
+	        <p>{{ COPY.labels.footnote|smarty }}</p>
+	    </div>
+	    {% endif %}
+
+	    <div class="footer">
+	        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+	        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+	    </div>
+</div>    
+
+		<script type="text/javascript">
+	        var DATA = {{ COPY.data.json() }};
+	    </script>
+
+
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/tablesort.js') }}
+    {{ JS.push('js/lib/tablesort.numeric.js') }}
+
+{% endblock js %}

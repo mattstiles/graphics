@@ -437,9 +437,16 @@ var ranges = chartElement.append('g')
                 return yScale(last[valueColumn]);
             })
             .attr('r', 3)
-            .attr('class', function(d, i) {
-                return 'dots ' + classify(d['name']);
-            });
+        .attr('class', function(d,i) {
+                var last = d['values'][d['values'].length - 1];
+
+                if (last[valueColumn] > 0) {
+                    return 'dotsworse';
+                }
+                else {
+                    return 'dotsbetter';
+                }
+            });   
     
 
 

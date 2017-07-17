@@ -1,8 +1,7 @@
 @import "base";
 
 svg {
-	margin-top: 40px;
-    margin-right: 100px;
+	margin-top: 60px;
 }
 
 h3 {
@@ -65,6 +64,35 @@ text {
     font-size: 10px;
 }
 
+path.provinces-seoul {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-anchor: top;
+    font-weight: bold;
+    display: inline;
+    stroke: @red3;
+    stroke-width: 1.4px;
+}
+
+.province-labels-shadows.seoul  {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-anchor: top;
+    font-weight: bold;
+    display: inline;
+    fill: #000;
+}
+
+
+
+.province-labels {
+    display:none;
+}
+
+.province-labels-shadows {
+    display:none;
+}
+
 .municipalities {
 	fill: #666;
     stroke: #fff;
@@ -115,6 +143,13 @@ path:hover {
     stroke-width: 0px;
 }
 
+.provinces path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: .8px;
+    stroke-linejoin: round;
+    }
+
 svg {
 	margin-top: 70px;
 }
@@ -136,12 +171,12 @@ svg {
 .key .key-item b {
     display: inline-block;
     width: 35px;
-    height: 10px;
+    height: 8px;
     margin-right: 0;
 }
 .key .key-item label {
     white-space: nowrap;
-    font-size: 11px;
+    font-size: 10px;
     color: #666;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;

@@ -1,0 +1,24 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+
+<div class="key-wrap">
+            <h3>Foreign Population by Seoul District</h3>
+            <ul class="key">
+            <li class="key-item"><b style="background: #dadaeb;"></b><label>150</label></li><li class="key-item"><b style="background: #bcbddc;"></b><label>2.5k</label></li><li class="key-item"><b style="background: #9e9ac8;"></b><label>7.5k</label></li><li class="key-item"><b style="background: #756bb1;"></b><label>15k</label></li><li class="key-item"><b style="background: #54278f;"></b><label>25k</label><label class="end-label">53k</label></li></ul>
+
+ </div>
+   
+    <div id="graphic" class="graphic">  
+    </div>
+
+    <div class="footer">
+		{% if COPY.labels.footnote %}<p>Notes: {{ COPY.labels.footnote|smarty }}</p>{% endif %}
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}

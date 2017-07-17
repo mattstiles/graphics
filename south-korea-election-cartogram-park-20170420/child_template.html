@@ -1,0 +1,23 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+
+<div class="key-wrap">
+            <h3>Vote Share: Park Geun-hye</h3>
+            <ul class="key">
+            <li class="key-item"><b style="background: #ECA395;"></b><label>7%</label></li><li class="key-item"><b style="background: #E27560;"></b><label>20%</label></li><li class="key-item"><b style="background: #D8472B;"></b><label>50%</label></li><li class="key-item"><b style="background: #A23520;"></b><label>60%</label></li><li class="key-item"><b style="background: #6C2315;"></b><label>70%</label><label class="end-label">87%</label></li></ul>
+ </div>
+   
+    <div id="graphic" class="graphic">  
+    </div>
+
+    <div class="footer">
+		{% if COPY.labels.footnote %}<p>Notes: {{ COPY.labels.footnote|smarty }}</p>{% endif %}
+        {% if COPY.labels.source %}<p>Data: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
