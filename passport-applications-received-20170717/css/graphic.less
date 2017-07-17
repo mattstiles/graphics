@@ -1,0 +1,83 @@
+@import "base";
+
+.lines {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #ccc;
+}
+
+.dots circle {
+    fill: @teal3;
+    stroke: #fff;
+    stroke-width: 1px;
+ }
+
+.value text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+}
+
+.highlights rect {
+    fill: #eee;
+}
+
+.highlight-label {
+    font-size: 11px;
+    font-style: italic;
+    fill: #666;
+    -webkit-font-smoothing: antialiased;
+
+    &.label-property {
+        text-anchor: start;
+    }
+
+    &.label-2012 {
+        text-anchor: end;
+    }
+}
+
+.label-property {
+    fill: #000;
+}
+
+.highlight-note {
+    display: none;
+    font-size: 11px;
+    color: #666;
+    padding: 10px 0 0;
+    -webkit-font-smoothing: antialiased;
+
+    b {
+        display: inline-block;
+        width: 24px;
+        height: 12px;
+        background: #dfdfdf;
+        margin-right: 5px;
+        margin-bottom: -1px;
+    }
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.chart-label {
+    fill: #999;
+    font-style: italic;
+    font-size: 11px;
+    text-anchor: end;
+}
+
+@media screen and (max-width: 500px) {
+    .value text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key {
+        display: none;
+    }
+}
