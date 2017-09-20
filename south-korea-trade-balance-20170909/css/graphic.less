@@ -1,0 +1,83 @@
+@import "base";
+
+// Add custom styles here
+
+rect.bar-negative {
+
+	fill: @orange3;
+}
+
+rect.bar-positive {
+
+	fill: @teal3;
+}
+
+.annotations {
+    text {
+        font-size: 11px;
+        fill: #999;
+        text-anchor: middle;
+    }
+    line {
+        stroke: #ccc;
+    }
+}
+
+h3 { 
+    margin: 12px 0px 12px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.highlight-label {
+    display:none;
+}
+
+.highlight-label-high {
+	display: none;
+}
+
+.highlight-label-low {
+	display: none;
+}
+
+div.chart.united-states .highlight-label {
+    font-size: 11px;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    display:inline;
+    color: #fff;
+}
+
+div.chart.united-states text.highlight-label-high {
+	font-size: 11px;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    display:inline;
+    fill:@teal3;
+}
+
+div.chart.united-states text.highlight-label-low {
+	font-size: 11px;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    display:inline;
+    fill: @orange3;
+}
+
+.avgline {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #999;
+    stroke-dasharray: 1;
+}
+
+@media screen and (min-width: 700px) {
+    .value text {
+        display:none;
+    }
+    .axis {
+    font-size: 10px;
+}
+}

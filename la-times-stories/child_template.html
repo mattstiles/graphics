@@ -1,0 +1,84 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+
+<div class="graphic">
+
+
+
+    <h3>Featured...</h3>
+
+        {% for row in COPY.data if row.featured == 'yes' %}
+
+<div class="featured">
+<div>
+  <ul>
+    <li>
+      <img width="325px" class="thumb" src="{{ row.imgurl }}">
+    <h2>{{ row.date }}</h2>  
+    <h1><a href="{{ row.storyurl }}">{{ row.headline }}</a></h1>
+    </li>
+  </ul>
+</div>
+
+</div>
+
+
+
+    {% endfor %}
+
+<h3>Other Stories...</h3>
+
+    <table id="state-table">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_headline }}</div>
+                    </th>
+                    <th>
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header amt">{{ COPY.labels.hdr_date }}</div>
+                    </th>
+                </tr>
+            </thead>
+
+            {% for row in COPY.data if row.featured == 'no' %}
+
+            <tr class="state-{{ row.usps|classify }}">
+                <td data-title="{{ COPY.labels.hdr_headline }}"><a href="{{ row.storyurl }}">{{ row.headline }}</a></td>
+                <td class="amt" data-title="{{ COPY.labels.hdr_date }}">{{ row.date }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>  
+
+</div>
+
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/tablesort.js') }}
+    {{ JS.push('js/lib/tablesort.numeric.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}

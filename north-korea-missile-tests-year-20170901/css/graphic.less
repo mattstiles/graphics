@@ -1,0 +1,24 @@
+@import "base";
+
+.chart-label {
+    fill: #999;
+    font-style: italic;
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+.bar text {
+    fill: #fff;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bar text {
+        display: none;
+    }
+}

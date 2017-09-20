@@ -1,0 +1,36 @@
+@import "base";
+
+// Add custom styles here
+
+rect.bar-negative {
+
+	fill: @orange3;
+}
+
+rect.bar-positive {
+
+	fill: @teal3;
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+.grid {
+    path { display: none; }
+
+    .tick {
+        stroke: #f6f6f6;
+        font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+        stroke-width: .5px;
+        shape-rendering: crispEdges;
+    }
+
+    &.y {
+        g:first-child line { display: none; }
+    }
+}
+
+}
+
+
